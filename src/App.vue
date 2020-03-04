@@ -8,6 +8,12 @@
 <script>
 
 import NavigationBar from "@/components/NavigationBar.vue";
+import Vue from 'vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+
 
 export default {
   name: "App",
