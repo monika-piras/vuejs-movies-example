@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1> ALL FILMS page</h1>
+    <h1> ALL FILMS</h1>
   </div>
 </template>
 
