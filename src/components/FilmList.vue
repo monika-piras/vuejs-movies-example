@@ -1,34 +1,43 @@
 <template>
-<div class="container">
+<div>
   <h2>Film Comici</h2>
-  <div class="row">
-    <div class="col-sm">
-      <ul class="list-group">
-        <li class="list-group-item"><img src="../../public/img/bee.jpg"></li>
-        <li class="list-group-item"><img src="../../public/img/bee.jpg"></li>
-      </ul>
+    <div class="row space">
+    <ul>
+      <div class="col-sm">
+      <li><img src="../../public/img/bee.jpg"></li>
+      </div>
+      <div class="col-sm">
+      <li><img src="../../public/img/bee.jpg"></li>
+      </div>
+      <div class="col-sm">
+      <li><img src="../../public/img/bee.jpg"></li>
+      </div>
+      <div class="col-sm">
+      <li><img src="../../public/img/bee.jpg"></li>
+      </div>
+    </ul>
     </div>
-    <div class="col-sm">
-      <ul class="list-group">
-        <li class="list-group-item"><img src="../../public/img/dock.jpg"></li>
-        <li class="list-group-item"><img src="../../public/img/dock.jpg"></li>
-      </ul>
-    </div>
-    <div class="col-sm">
-      <ul class="list-group">
-        <li class="list-group-item"><img src="../../public/img/duck.jpg"></li>
-        <li class="list-group-item"><img src="../../public/img/duck.jpg"></li>
-      </ul>
-    </div>
-    <div class="col-sm">
-      <ul class="list-group">
-        <li class="list-group-item"><img src="../../public/img/squirrel.jpg"></li>
-        <li class="list-group-item"><img src="../../public/img/squirrel.jpg"></li>
-      </ul>
-    </div>
-  </div>
 
-<h2>Film Romantici</h2>
+  <h2>Film Romantici</h2>
+    <div class="row space">
+    <ul>
+      <div class="col-sm">
+      <li><img src="../../public/img/trees.jpg"></li>
+      </div>
+      <div class="col-sm">
+      <li><img src="../../public/img/trees.jpg"></li>
+      </div>
+      <div class="col-sm">
+      <li><img src="../../public/img/trees.jpg"></li>
+      </div>
+      <div class="col-sm">
+      <li><img src="../../public/img/trees.jpg"></li>
+      </div>
+    </ul>
+    </div>
+
+  
+<!--<h2>Film Romantici</h2>
   <div class="row">
     <div class="col-sm">
       <ul class="list-group">
@@ -54,20 +63,35 @@
         <li class="list-group-item"><img src="../../public/img/flower.jpg"></li>
       </ul>
     </div>
-  </div>
+  </div> -->
 </div>
 </template>
 
 <script>
 export default {
-  name: 'FilmList',
-  components: {
-  }
-}
+  name: "FilmList",
+  components: {}
+};
 </script>
 <style>
-img  {
-  width:100%;
+.space {
+  margin: 30px;
+}
+img {
+  width: 25%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li img {
+  display: block;
+  float: left;
+  padding: 8px;
+  background-color: #dddddd;
 }
 </style>
 
