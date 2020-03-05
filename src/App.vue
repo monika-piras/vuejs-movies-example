@@ -14,7 +14,6 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 // Install BootstrapVue
 Vue.use(BootstrapVue)
 
-
 export default {
   name: "App",
   components: {

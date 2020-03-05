@@ -59,33 +59,39 @@
       Sliding: {{ sliding }}
     </p>
   </div>
+
+  <film-list/>
+  
   </div>
 </template>
     
-  
 
 <script>
+import FilmList from '@/components/FilmList.vue'
+
 export default {
-  
-  name: 'Dashboard',
+  name: "Dashboard",
+  components: {
+    FilmList
+  },
   props: {
     msg: String
   },
   data() {
-      return {
-        slide: 0,
-        sliding: null
-      }
+    return {
+      slide: 0,
+      sliding: null
+    };
+  },
+  methods: {
+    onSlideStart(slide) {
+      this.sliding = true;
     },
-    methods: {
-      onSlideStart(slide) {
-        this.sliding = true
-      },
-      onSlideEnd(slide) {
-        this.sliding = false
-      }
+    onSlideEnd(slide) {
+      this.sliding = false;
     }
-}
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -103,5 +109,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.carousel-item {
+  height: 380px;
 }
 </style>
