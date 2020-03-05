@@ -1,32 +1,58 @@
 <template>
 <div class="container">
+  <h2>Film Comici</h2>
   <div class="row">
     <div class="col-sm">
-      <img src="../../public/img/bee.jpg">
+      <ul class="list-group">
+        <li class="list-group-item"><img src="../../public/img/bee.jpg"></li>
+        <li class="list-group-item"><img src="../../public/img/bee.jpg"></li>
+      </ul>
     </div>
     <div class="col-sm">
-      <img src="../../public/img/dock.jpg">
+      <ul class="list-group">
+        <li class="list-group-item"><img src="../../public/img/dock.jpg"></li>
+        <li class="list-group-item"><img src="../../public/img/dock.jpg"></li>
+      </ul>
     </div>
     <div class="col-sm">
-      <img src="../../public/img/duck.jpg">
+      <ul class="list-group">
+        <li class="list-group-item"><img src="../../public/img/duck.jpg"></li>
+        <li class="list-group-item"><img src="../../public/img/duck.jpg"></li>
+      </ul>
     </div>
     <div class="col-sm">
-      <img src="../../public/img/squirrel.jpg">
+      <ul class="list-group">
+        <li class="list-group-item"><img src="../../public/img/squirrel.jpg"></li>
+        <li class="list-group-item"><img src="../../public/img/squirrel.jpg"></li>
+      </ul>
     </div>
   </div>
 
+<h2>Film Romantici</h2>
   <div class="row">
     <div class="col-sm">
-      <img src="../../public/img/bird.jpg">
+      <ul class="list-group">
+        <li class="list-group-item"><img src="../../public/img/bee.jpg"></li>
+        <li class="list-group-item"><img src="../../public/img/bee.jpg"></li>
+      </ul>
     </div>
     <div class="col-sm">
-      <img src="../../public/img/trees.jpg">
+      <ul class="list-group">
+        <li class="list-group-item"><img src="../../public/img/dock.jpg"></li>
+        <li class="list-group-item"><img src="../../public/img/dock.jpg"></li>
+      </ul>
     </div>
     <div class="col-sm">
-      <img src="../../public/img/water.jpg">
+      <ul class="list-group">
+        <li class="list-group-item"><img src="../../public/img/duck.jpg"></li>
+        <li class="list-group-item"><img src="../../public/img/duck.jpg"></li>
+      </ul>
     </div>
     <div class="col-sm">
-      <img src="../../public/img/flower.jpg">
+      <ul class="list-group">
+        <li class="list-group-item"><img src="../../public/img/squirrel.jpg"></li>
+        <li class="list-group-item"><img src="../../public/img/squirrel.jpg"></li>
+      </ul>
     </div>
   </div>
 </div>
