@@ -10,6 +10,12 @@ import FilmList from '@/components/FilmList.vue'
 
 export default {
   name: 'Film',
+  props:{
+  },
+  data() {
+    return {
+    };
+  },
   components: {
     FilmList
   }

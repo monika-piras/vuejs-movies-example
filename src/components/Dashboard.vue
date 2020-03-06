@@ -60,7 +60,7 @@
     </p>
   </div>
 
-  <film-list/>
+  <film-list title="Film Romantici"/>
   
   </div>
 </template>
