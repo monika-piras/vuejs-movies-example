@@ -1,39 +1,23 @@
 <template>
 <div>
-  <h2>Film Comici</h2>
+  <h2>{{title1}}</h2>
     <div class="row space">
-    <ul>
-      <div class="col-sm">
-      <li><img src="../../public/img/bee.jpg"></li>
+      <div v-for="film in this.$store.getters.getFilms"  class="col-sm">
+      <p>{{film.title}}</p>
+      <img v-bind:src="film.image" alt="Italian Trulli"/>
+      <p>{{film.description}}</p>
+      <p>{{film.categories}}</p>
       </div>
-      <div class="col-sm">
-      <li><img src="../../public/img/bee.jpg"></li>
-      </div>
-      <div class="col-sm">
-      <li><img src="../../public/img/bee.jpg"></li>
-      </div>
-      <div class="col-sm">
-      <li><img src="../../public/img/bee.jpg"></li>
-      </div>
-    </ul>
     </div>
 
-  <h2>{{title}}</h2>
+  <h2>{{title2}}</h2>
     <div class="row space">
-    <ul>
-      <div class="col-sm">
-      <li><img src="../../public/img/trees.jpg"></li>
+      <div v-for="film in this.$store.getters.getFilms"  class="col-sm">
+      <p>{{film.title}}</p>
+      <img v-bind:src="film.image" alt="Italian Trulli"/>
+      <p>{{film.description}}</p>
+      <p>{{film.categories}}</p>
       </div>
-      <div class="col-sm">
-      <li><img src="../../public/img/trees.jpg"></li>
-      </div>
-      <div class="col-sm">
-      <li><img src="../../public/img/trees.jpg"></li>
-      </div>
-      <div class="col-sm">
-      <li><img src="../../public/img/trees.jpg"></li>
-      </div>
-    </ul>
     </div>
 </div>
 </template>
@@ -42,7 +26,8 @@
 export default {
   name: "FilmList",
   props: {
-    title: String
+    title1: String,
+    title2: String,
   },
   data() {
     return {

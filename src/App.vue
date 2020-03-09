@@ -18,6 +18,11 @@ export default {
   name: "App",
   components: {
     NavigationBar
+  },
+  created: function() {
+    // `this` points to the vm instance
+    console.log("on created APP");
+    this.$store.dispatch("loadFilms");
   }
 };
 </script>

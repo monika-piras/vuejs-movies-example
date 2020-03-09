@@ -1,0 +1,23 @@
+{
+    "lista": [
+        {
+            "title": "Titanic",
+            "description": "Titanic fu un transatlantico britannico della classe Olympic, diventato famoso per la collisione con un iceberg nella notte tra il 14 e il 15 aprile 1912 e il ..",
+            "categories": ["romantic", "comic","top-raited"],
+            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIX0zX-QOI-gaC473n51sbXIqobgEGnbL86fCk0JmHkXThrPRX"
+        },
+        {
+            "title": "Quo vado",
+            "description": "è un film del 2016 diretto da Gennaro Nunziante e interpretato da Checco Zalone. Quarto film con protagonista Zalone dopo Cado dalle nubi, Che ...",
+            "categories": ["comic", "top-raited"],
+            "image": "https://pad.mymovies.it/filmclub/2015/11/022/locandina.jpg"
+        },
+        {
+            "title": "One night with the King",
+            "description": "One Night with the King è un film del 2006 diretto da Michael O. Sajbel. È un film drammatico statunitense, interpretato da Tiffany Dupont, ...",
+            "categories": ["romantic"],
+            "image": "https://resources5.eaglepictures.com/image/1/400/600/5bd1db5d0ed52/one-night-with-the-king-una-notte-con-il-re-cover.jpg"
+        }
+       
+    ]
+}
