@@ -2,7 +2,7 @@
 <div>
   <h2>{{title1}}</h2>
     <div class="row space">
-      <div v-for="film in this.$store.getters.getFilms"  class="col-sm">
+      <div v-for="film in this.comicFilms"  class="col-sm">
       <p>{{film.title}}</p>
       <img v-bind:src="film.image" alt="Italian Trulli"/>
       <p>{{film.description}}</p>
@@ -12,7 +12,7 @@
 
   <h2>{{title2}}</h2>
     <div class="row space">
-      <div v-for="film in this.$store.getters.getFilms"  class="col-sm">
+      <div v-for="film in this.romanticFilms"  class="col-sm">
       <p>{{film.title}}</p>
       <img v-bind:src="film.image" alt="Italian Trulli"/>
       <p>{{film.description}}</p>
@@ -27,13 +27,43 @@ export default {
   name: "FilmList",
   props: {
     title1: String,
-    title2: String,
+    title2: String
   },
   data() {
     return {
+      filmList: [],
+      romanticFilms: [],
+      comicFilms: []
     };
   },
-  components: {}
+  created: function() {
+    this.$store.watch(
+      state => {
+        return this.$store.state.allFilms; // could also put a Getter here
+      },
+      (newValue, oldValue) => {
+        //something changed do something
+        console.log(newValue);
+        this.filmList = newValue;
+        this.updateCategories();
+      },
+      //Optional Deep if you need it
+      {
+        deep: true
+      }
+    );
+  },
+  components: {},
+  methods: {
+    updateCategories() {
+      this.comicFilms = this.filmList.filter(item =>
+        item.categories.includes("comic")
+      );
+      this.romanticFilms = this.filmList.filter(item =>
+        item.categories.includes("romantic")
+      );
+    }
+  }
 };
 </script>
 <style>
