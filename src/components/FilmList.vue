@@ -37,13 +37,17 @@ export default {
     };
   },
   created: function() {
+    console.log("on created listfilm");
+    this.filmList = this.$store.getters.getFilms;
+    this.updateCategories();
+
     this.$store.watch(
       state => {
         return this.$store.state.allFilms; // could also put a Getter here
       },
       (newValue, oldValue) => {
         //something changed do something
-        console.log(newValue);
+        console.log("watch: ",newValue);
         this.filmList = newValue;
         this.updateCategories();
       },
