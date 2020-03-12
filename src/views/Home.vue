@@ -29,7 +29,7 @@
     </p>
   </div>
 
-  <film-list title1="Film Comici" title2="Film Romantici" title3="Top-Rated"/>
+  <film-list title1="Film Comici" title2="Film Romantici"/>
   
   </div>
 </template>
@@ -50,7 +50,6 @@ export default {
     return {
       slide: 0,
       sliding: null
-      // topRatedFilms: []
     };
   },
   methods: {

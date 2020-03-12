@@ -1,17 +1,6 @@
 <template>
 <div> <!-- {{totFilms}}  -->
 
-  <h2>{{title3}}</h2>
-    <div class="row space"> 
-      <div v-for="film in this.topRatedFilms"  class="col-sm">
-      <h4>{{film.title}}</h4>
-      <img v-bind:src="film.image" alt="Italian Trulli"/>
-      <p>{{film.description}}</p>
-      <p>{{film.categories}}</p>
-      </div>
-    </div>
-
-
   <h2>{{title1}}</h2>
     <div class="row space"> 
       <div v-for="film in this.comicFilms"  class="col-sm">
@@ -46,8 +35,7 @@ export default {
     return {
       filmList: [],
       romanticFilms: [],
-      comicFilms: [],
-      topRatedFilms: []
+      comicFilms: []
     };
   },
     created: function() {
@@ -80,9 +68,6 @@ export default {
       );
       this.romanticFilms = this.filmList.filter(item =>
         item.categories.includes("romantic")
-      );
-      this.topRatedFilms = this.filmList.filter(item =>
-        item.categories.includes("top-rated")
       );
     }
   },
