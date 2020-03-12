@@ -17,7 +17,7 @@ export default new Vuex.Store({
 
   mutations: {
     loadFilmsMutation(state) {
-      console.log('mutation load films');
+      console.log('Mutation loadFilms');
       axios
         .get('/films.json')
         .then(response => {

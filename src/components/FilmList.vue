@@ -1,9 +1,21 @@
 <template>
-<div>
+<div> <!-- {{totFilms}}  -->
+
+  <h2>{{title3}}</h2>
+    <div class="row space"> 
+      <div v-for="film in this.topRatedFilms"  class="col-sm">
+      <h4>{{film.title}}</h4>
+      <img v-bind:src="film.image" alt="Italian Trulli"/>
+      <p>{{film.description}}</p>
+      <p>{{film.categories}}</p>
+      </div>
+    </div>
+
+
   <h2>{{title1}}</h2>
-    <div class="row space">
+    <div class="row space"> 
       <div v-for="film in this.comicFilms"  class="col-sm">
-      <p>{{film.title}}</p>
+      <h4>{{film.title}}</h4>
       <img v-bind:src="film.image" alt="Italian Trulli"/>
       <p>{{film.description}}</p>
       <p>{{film.categories}}</p>
@@ -13,7 +25,7 @@
   <h2>{{title2}}</h2>
     <div class="row space">
       <div v-for="film in this.romanticFilms"  class="col-sm">
-      <p>{{film.title}}</p>
+      <h4>{{film.title}}</h4>
       <img v-bind:src="film.image" alt="Italian Trulli"/>
       <p>{{film.description}}</p>
       <p>{{film.categories}}</p>
@@ -27,17 +39,19 @@ export default {
   name: "FilmList",
   props: {
     title1: String,
-    title2: String
+    title2: String,
+    title3: String
   },
   data() {
     return {
       filmList: [],
       romanticFilms: [],
-      comicFilms: []
+      comicFilms: [],
+      topRatedFilms: []
     };
   },
-  created: function() {
-    console.log("on created listfilm");
+    created: function() {
+    console.log("ON-CREATED FilmList ");
     this.filmList = this.$store.getters.getFilms;
     this.updateCategories();
 
@@ -56,7 +70,8 @@ export default {
         deep: true
       }
     );
-  },
+  },   
+
   components: {},
   methods: {
     updateCategories() {
@@ -66,8 +81,19 @@ export default {
       this.romanticFilms = this.filmList.filter(item =>
         item.categories.includes("romantic")
       );
+      this.topRatedFilms = this.filmList.filter(item =>
+        item.categories.includes("top-rated")
+      );
     }
-  }
+  },
+/*  computed: {
+    totFilms() {
+      this.filmList = this.$store.getters.getFilms;
+      this.updateCategories();
+
+      console.log("COMPUTED PROPERTY");
+    }
+  }  */
 };
 </script>
 <style>
