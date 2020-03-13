@@ -12,7 +12,12 @@ export default new Vuex.Store({
   },
 
   getters: {
-    getFilms: (state) => state.allFilms
+    getFilms: (state) => state.allFilms,
+
+    getFilmDetails: (state) => (filmID) => {
+      const filmIndex = state.allFilms.findIndex(x => x.id == filmID);
+      return state.allFilms[filmIndex];
+    },
 },
 
   mutations: {

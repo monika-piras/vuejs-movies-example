@@ -4,6 +4,18 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 
+
+
+import { BootstrapVue,BIcon, BIconChevronLeft} from 'bootstrap-vue'
+
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+Vue.use(BootstrapVue)
+Vue.component('BIcon', BIcon)
+Vue.component('BIconChevronLeft', BIconChevronLeft)
+
+
+
 Vue.config.productionTip = false
 
 new Vue({

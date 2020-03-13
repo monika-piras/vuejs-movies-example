@@ -1,13 +1,12 @@
 <template>
 <div> <!-- {{totFilms}}  -->
 
-  <h2>{{title1}}</h2>
+  <h2> {{title1}}</h2>
     <div class="row space"> 
-      <div v-for="film in this.comicFilms"  class="col-sm">
+      <div v-for="film in this.comicFilms"  class="col-sm" >
       <h4>{{film.title}}</h4>
-      <img v-bind:src="film.image" alt="Italian Trulli"/>
-      <p>{{film.description}}</p>
-      <p>{{film.categories}}</p>
+      <img v-bind:src="film.image"  @click="directDetails(film.id)"
+                class="pointer" alt="Image Film"/>
       </div>
     </div>
 
@@ -15,9 +14,17 @@
     <div class="row space">
       <div v-for="film in this.romanticFilms"  class="col-sm">
       <h4>{{film.title}}</h4>
-      <img v-bind:src="film.image" alt="Italian Trulli"/>
-      <p>{{film.description}}</p>
-      <p>{{film.categories}}</p>
+      <img v-bind:src="film.image" @click="directDetails(film.id)" 
+            class="pointer" alt="Image Film"/>
+      </div>
+    </div>
+
+  <h2>{{title3}}</h2>
+    <div class="row space"> 
+      <div v-for="film in this.adventureFilms"  class="col-sm">
+      <h4>{{film.title}}</h4>
+      <img v-bind:src="film.image" @click="directDetails(film.id)" 
+            class="pointer" alt="Image Film"/>
       </div>
     </div>
 </div>
@@ -29,16 +36,38 @@ export default {
   props: {
     title1: String,
     title2: String,
-    title3: String
+    title3: String,
   },
   data() {
     return {
       filmList: [],
       romanticFilms: [],
-      comicFilms: []
+      comicFilms: [],
+      adventureFilms: [],
     };
   },
-    created: function() {
+  components: {},
+
+  methods: {
+    updateCategories() {
+      this.comicFilms = this.filmList.filter(item =>
+        item.categories.includes("comic")
+      );
+      this.romanticFilms = this.filmList.filter(item =>
+        item.categories.includes("romantic")
+      );
+      this.adventureFilms = this.filmList.filter(item =>
+        item.categories.includes("adventure")
+      );
+    },
+
+    directDetails(id) {
+      console.log("numero id: " + id);
+      this.$router.push("/filmDetails/" + id);
+    }
+  },
+
+  created: function() {
     console.log("ON-CREATED FilmList ");
     this.filmList = this.$store.getters.getFilms;
     this.updateCategories();
@@ -59,18 +88,6 @@ export default {
       }
     );
   },   
-
-  components: {},
-  methods: {
-    updateCategories() {
-      this.comicFilms = this.filmList.filter(item =>
-        item.categories.includes("comic")
-      );
-      this.romanticFilms = this.filmList.filter(item =>
-        item.categories.includes("romantic")
-      );
-    }
-  },
 /*  computed: {
     totFilms() {
       this.filmList = this.$store.getters.getFilms;
@@ -100,6 +117,9 @@ li img {
   float: left;
   padding: 8px;
   background-color: #dddddd;
+}
+.pointer {
+  cursor: pointer;
 }
 </style>
 
