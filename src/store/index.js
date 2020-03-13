@@ -27,6 +27,8 @@ export default new Vuex.Store({
         .get('/films.json')
         .then(response => {
           const lista = response.data.lista;
+          console.log('ha risposto la chiamata api');
+          
           state.allFilms.push(...lista);
         })
     }

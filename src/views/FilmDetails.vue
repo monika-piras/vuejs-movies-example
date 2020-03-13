@@ -9,12 +9,12 @@
       </div>
 
       
-      <div class="row space">
+      <div class="row space" v-if="filmDetail">
         <div class="col">
         <h4>{{filmDetail.title}}</h4>
         <img v-bind:src="filmDetail.image"  alt="Image Film"/>
         <p>{{filmDetail.description}}</p>
-        <p>{{filmDetail.categories}}</p>
+        <!-- <p>{{filmDetail.categories}}</p> -->
           </div>
         </div>
       </div>    
@@ -35,6 +35,9 @@ export default {
     };
   },
   components: {},
+  created(){
+    console.log('creato dettaglio');
+  },
   methods: {
     goBack() {
       this.$router.push("../");
@@ -50,3 +53,8 @@ export default {
   }
 };
 </script>
+<style>
+img {
+  margin-bottom: 30px;
+}
+</style>

@@ -1,6 +1,7 @@
 <template>
 <div>
   <ul class="nav nav-tabs">
+
   <img alt="Vue logo" src="../../public/img/icons/favicon-32x32.png"> 
     
   <li class="nav-item">
@@ -9,8 +10,11 @@
   <li class="nav-item">
     <router-link to="/film" class="nav-link">Film</router-link>
   </li>
-  <li class="nav-item">
+  <!-- <li class="nav-item">
     <router-link to="/filmDetails" class="nav-link">Film Details</router-link>
+  </li> -->
+   <li class="nav-item">
+    <router-link to="/addFilm" class="nav-link"><button>Add Film</button></router-link> 
   </li>
   
 </ul>
@@ -29,4 +33,5 @@ export default {
  img {
    width: 30px;
  }
+ 
 </style>
