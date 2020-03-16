@@ -1,7 +1,7 @@
 <template>
 <div> <!-- {{totFilms}}  -->
 
-  <h2> {{title1}}</h2>
+  <!-- <h2> {{title1}}</h2>
     <div class="row space"> 
       <div v-for="film in this.comicFilms"  class="col-sm" >
       <h4>{{film.title}}</h4>
@@ -26,7 +26,35 @@
       <img v-bind:src="film.image" @click="directDetails(film.id)" 
             class="pointer" alt="Image Film"/>
       </div>
+    </div> -->
+    <div class="container">
+  <div class="row">
+    <h3> {{title1}}</h3>
+    <div class="col-sm" v-for="film in this.comicFilms" >
+      <h6>{{film.title}}</h6>
+      <img v-bind:src="film.image"  @click="directDetails(film.id)"
+                class="pointer" alt="Image Film"/>
     </div>
+  </div>
+
+    <div class="row">
+    <h3>{{title2}}</h3>
+    <div class="col-sm" v-for="film in this.romanticFilms">
+      <h6>{{film.title}}</h6>
+      <img v-bind:src="film.image"  @click="directDetails(film.id)"
+                class="pointer" alt="Image Film"/>
+    </div>
+  </div>
+
+    <div class="row">
+    <h3>{{title3}}</h3>
+    <div class="col-sm" v-for="film in this.adventureFilms">
+      <h6>{{film.title}}</h6>
+      <img v-bind:src="film.image"  @click="directDetails(film.id)"
+                class="pointer" alt="Image Film"/>
+    </div>
+  </div>
+</div>
 </div>
 </template>
 

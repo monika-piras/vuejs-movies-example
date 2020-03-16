@@ -34,6 +34,20 @@
             "categories": ["adventure"],
             "id" : 5,
             "image": "https://pad.mymovies.it/filmclub/2006/08/064/locandina.jpg"
+        },
+        {
+            "title": "Una notte da leoni",
+            "description": "(The Hangover) è un film del 2009 diretto da Todd Phillips, con Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha e Heather ...",
+            "categories": ["comic", "adventure"],
+            "id" : 6,
+            "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
+        },
+        {
+            "title": "Dirty Dancing",
+            "description": "Balli proibiti (Dirty Dancing) è un film del 1987 diretto da Emile Ardolino e interpretato da Patrick Swayze e Jennifer Grey. Il brano portante della ...",
+            "categories": ["romantic"],
+            "id" : 7,
+            "image": "https://pad.mymovies.it/filmclub/2006/08/185/imm.jpg"
         }
         
     ]
