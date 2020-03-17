@@ -1,60 +1,16 @@
 <template>
-<div> <!-- {{totFilms}}  -->
-
-  <!-- <h2> {{title1}}</h2>
-    <div class="row space"> 
-      <div v-for="film in this.comicFilms"  class="col-sm" >
-      <h4>{{film.title}}</h4>
-      <img v-bind:src="film.image"  @click="directDetails(film.id)"
-                class="pointer" alt="Image Film"/>
+<div>
+  <h3>{{title}}</h3>
+      <div class="scroll-parent">
+       <button  class="move-left" @click="less()"><b-icon-chevron-left></b-icon-chevron-left></button>
+        <ul class="scrollable">
+          <li v-for="film in this.films">
+            <img v-bind:src="film.image"  @click="directDetails(film.id)"
+                  class="pointer" alt="Image Film"/>
+          </li>
+        </ul>
+      <button class="move-right" @click="more()"><b-icon-chevron-right></b-icon-chevron-right></button>
       </div>
-    </div>
-
-  <h2>{{title2}}</h2>
-    <div class="row space">
-      <div v-for="film in this.romanticFilms"  class="col-sm">
-      <h4>{{film.title}}</h4>
-      <img v-bind:src="film.image" @click="directDetails(film.id)" 
-            class="pointer" alt="Image Film"/>
-      </div>
-    </div>
-
-  <h2>{{title3}}</h2>
-    <div class="row space"> 
-      <div v-for="film in this.adventureFilms"  class="col-sm">
-      <h4>{{film.title}}</h4>
-      <img v-bind:src="film.image" @click="directDetails(film.id)" 
-            class="pointer" alt="Image Film"/>
-      </div>
-    </div> -->
-    <div class="container">
-  <div class="row">
-    <h3> {{title1}}</h3>
-    <div class="col-sm" v-for="film in this.comicFilms" >
-      <h6>{{film.title}}</h6>
-      <img v-bind:src="film.image"  @click="directDetails(film.id)"
-                class="pointer" alt="Image Film"/>
-    </div>
-  </div>
-
-    <div class="row">
-    <h3>{{title2}}</h3>
-    <div class="col-sm" v-for="film in this.romanticFilms">
-      <h6>{{film.title}}</h6>
-      <img v-bind:src="film.image"  @click="directDetails(film.id)"
-                class="pointer" alt="Image Film"/>
-    </div>
-  </div>
-
-    <div class="row">
-    <h3>{{title3}}</h3>
-    <div class="col-sm" v-for="film in this.adventureFilms">
-      <h6>{{film.title}}</h6>
-      <img v-bind:src="film.image"  @click="directDetails(film.id)"
-                class="pointer" alt="Image Film"/>
-    </div>
-  </div>
-</div>
 </div>
 </template>
 
@@ -62,30 +18,27 @@
 export default {
   name: "FilmList",
   props: {
-    title1: String,
-    title2: String,
-    title3: String,
+    title: String,
+    category: String
   },
   data() {
     return {
       filmList: [],
-      romanticFilms: [],
-      comicFilms: [],
-      adventureFilms: [],
+      films: [],
     };
   },
   components: {},
 
   methods: {
+    more() {
+      this.$el.querySelector(".scrollable").scrollLeft += +300;
+    },
+    less() {
+      this.$el.querySelector(".scrollable").scrollLeft += -300;
+    },
     updateCategories() {
-      this.comicFilms = this.filmList.filter(item =>
-        item.categories.includes("comic")
-      );
-      this.romanticFilms = this.filmList.filter(item =>
-        item.categories.includes("romantic")
-      );
-      this.adventureFilms = this.filmList.filter(item =>
-        item.categories.includes("adventure")
+      this.films = this.filmList.filter(item =>
+        item.categories.includes(this.category)
       );
     },
 
@@ -106,7 +59,7 @@ export default {
       },
       (newValue, oldValue) => {
         //something changed do something
-        console.log("watch: ",newValue);
+        console.log("watch: ", newValue);
         this.filmList = newValue;
         this.updateCategories();
       },
@@ -115,8 +68,8 @@ export default {
         deep: true
       }
     );
-  },   
-/*  computed: {
+  }
+  /*  computed: {
     totFilms() {
       this.filmList = this.$store.getters.getFilms;
       this.updateCategories();
@@ -127,27 +80,53 @@ export default {
 };
 </script>
 <style>
-.space {
-  margin: 30px;
+.pointer {
+  cursor: pointer;
 }
-img {
-  width: 25%;
+.scroll-parent ul {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  list-style: none;
 }
-ul {
-  list-style-type: none;
+.scroll-parent li {
+  margin: 0 0.3rem;
+}
+.scroll-parent li > img {
   margin: 0;
-  padding: 0;
+  height: 300px;
+  width: auto;
+}
+.scroll-parent:first-child {
+  margin-left: 50px;
+}
+.move-right {
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: #e1e1ea7a;
+}
+.move-left {
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  top: 0;
+  left: 0;
+  border: none;
+  background-color: #e1e1ea7a;
+}
+.scrollItem {
   overflow: hidden;
 }
 
-li img {
-  display: block;
-  float: left;
-  padding: 8px;
-  background-color: #dddddd;
+.scroll-parent {
+  position: relative;
 }
-.pointer {
-  cursor: pointer;
+button{
+  outline:none !important;
 }
 </style>
 

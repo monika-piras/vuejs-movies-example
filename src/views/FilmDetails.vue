@@ -7,36 +7,28 @@
           </div>
         </div>
       </div>
-
       
       <div class="row space" v-if="filmDetail">
         <div class="col">
         <h4>{{filmDetail.title}}</h4>
-        <img v-bind:src="filmDetail.image"  alt="Image Film"/>
+        <img class="immagine" v-bind:src="filmDetail.image"  alt="Image Film"/>
         <p>{{filmDetail.description}}</p>
-        <!-- <p>{{filmDetail.categories}}</p> -->
           </div>
         </div>
       </div>    
-</div>
-
 </template>
 
 
 <script>
 export default {
   name: "FilmDetails",
-  props: {
-    
-  },
+  props: {},
   data() {
-    return {
-      
-    };
+    return {};
   },
   components: {},
-  created(){
-    console.log('creato dettaglio');
+  created() {
+    console.log("creato dettaglio");
   },
   methods: {
     goBack() {
@@ -53,8 +45,12 @@ export default {
   }
 };
 </script>
-<style>
-img {
+<style scoped>
+.immagine {
   margin-bottom: 30px;
+}
+img {
+  max-width: 300px;
+  height: auto;
 }
 </style>

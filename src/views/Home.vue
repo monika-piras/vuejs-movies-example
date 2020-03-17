@@ -19,7 +19,7 @@
       <!-- Slides with custom text -->
       
         <template v-for="film in this.topRatedFilms"  >
-          <b-carousel-slide v-bind:img-src="film.image" :key="film.id">
+          <b-carousel-slide v-bind:img-src="film.imageHd" :key="film.id">
             <h1 @click="directDetails(film.id)" class="pointer">{{film.title}}</h1>
           </b-carousel-slide>
         </template>
@@ -30,8 +30,12 @@
     </p>
   </div>
 
-  <film-list title1="Film Comici" title2="Film Romantici" title3="Film Avventura"/>
-  
+    <film-list title="Film Comici" category="comic" />
+    
+       <film-list title="Film Romantici"  category="romantic"/>
+    <film-list title="Film Avventura"  category="adventure"/>
+
+
   </div>
 </template>
     
@@ -60,7 +64,7 @@ export default {
     onSlideEnd(slide) {
       this.sliding = false;
     },
-    
+
     directDetails(id) {
       console.log("numero id: " + id);
       this.$router.push("/filmDetails/" + id);
@@ -93,6 +97,6 @@ a {
   color: #42b983;
 }
 .carousel-item {
-  height: 380px;
+  height: 300px;
 }
 </style>
