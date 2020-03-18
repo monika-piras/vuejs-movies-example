@@ -1,21 +1,24 @@
 <template>
-    <div class="">
-      <div class="container">
-        <div class="row">
-          <div class="col-auto left">
-            <b-button v-on:click="goBack()"><b-icon-chevron-left></b-icon-chevron-left>Back</b-button>
-          </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-auto left">
+        <b-button v-on:click="goBack()"><b-icon-chevron-left></b-icon-chevron-left>Back</b-button>
       </div>
+    </div>
       
-      <div class="row space" v-if="filmDetail">
-        <div class="col">
+    <div class="row" v-if="filmDetail">
+      <div class="col">
         <h4>{{filmDetail.title}}</h4>
         <img class="immagine" v-bind:src="filmDetail.image"  alt="Image Film"/>
         <p>{{filmDetail.description}}</p>
-          </div>
-        </div>
-      </div>    
+      </div>
+      <div class="col">
+        <p>CAST:{{filmDetail.cast}}</p>
+
+<iframe width="560" height="315" v-bind:src="filmDetail.trailerPath" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>    
 </template>
 
 

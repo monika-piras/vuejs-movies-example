@@ -4,15 +4,19 @@
             "title": "Titanic",
             "description": "Titanic fu un transatlantico britannico della classe Olympic, diventato famoso per la collisione con un iceberg nella notte tra il 14 e il 15 aprile 1912 e il ..",
             "categories": ["romantic", "comic"],
+            "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 1,
+            "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"",
             "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIX0zX-QOI-gaC473n51sbXIqobgEGnbL86fCk0JmHkXThrPRX"
         },
         {
             "title": "Quo vado",
-            "description": "E' un film del 2016 diretto da Gennaro Nunziante e interpretato da Checco Zalone. Quarto film con protagonista Zalone dopo Cado dalle nubi, Che ...",
+            "description": "E' un film calloni(2/3) del 2016 diretto da Gennaro Nunziante e interpretato da Checco Zalone. Quarto film con protagonista Zalone dopo Cado dalle nubi, Che ...",
             "categories": ["comic", "top-rated"],
+            "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 2,
+            "trailerPath":"https://www.youtube.com/embed/t3al1PBx09A",
             "imageHd":"https://www.movietele.it/files/images/2016/04/quo-vado-di-zalone-in-dvd-blu-ray.jpg",
             "image": "https://pad.mymovies.it/filmclub/2015/11/022/locandina.jpg"
         },
@@ -20,7 +24,9 @@
             "title": "One night with the King",
             "description": "One Night with the King è un film del 2006 diretto da Michael O. Sajbel. È un film drammatico statunitense, interpretato da Tiffany Dupont, ...",
             "categories": ["romantic", "top-rated"],
+            "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 3,
+            "trailerPath":"https://www.youtube.com/embed/HgRR322ezUE",
             "imageHd":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQpEmk-oa0J0_eLxSQfuvGpnE6vPhsQvuz31jCbczLo86ly5xae",
             "image": "https://resources5.eaglepictures.com/image/1/400/600/5bd1db5d0ed52/one-night-with-the-king-una-notte-con-il-re-cover.jpg"
         },
@@ -28,7 +34,9 @@
             "title": "Indiana Jones e i predatori dell'arca perduta",
             "description": "(Raiders of the Lost Ark) è un film del 1981 di Steven Spielberg, capostipite della tetralogia cinematografica di Indiana Jones.",
             "categories": ["adventure", "top-rated"],
+            "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 4,
+            "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_9c8fTxtpEW1q98q2VwmBLzOrxTPTVge7GSk6NB4thnN0S83a",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTphCa50-9QAmsVxZ13pUyKbCIHoS610tu3Hf7Dr1a-J4pfKkKJ"
         },
@@ -36,7 +44,9 @@
             "title": "Indiana Jones e il tempio maledetto",
             "description": "(Indiana Jones and the Temple of Doom) è un film del 1984 diretto da Steven Spielberg, secondo episodio della saga ...",
             "categories": ["adventure"],
+            "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 5,
+            "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2006/08/064/locandina.jpg"
         },
@@ -44,7 +54,9 @@
             "title": "Una notte da leoni",
             "description": "(The Hangover) è un film del 2009 diretto da Todd Phillips, con Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha e Heather ...",
             "categories": ["comic", "adventure"],
+            "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 6,
+            "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
         },
@@ -52,7 +64,9 @@
             "title": "Dirty Dancing",
             "description": "Balli proibiti (Dirty Dancing) è un film del 1987 diretto da Emile Ardolino e interpretato da Patrick Swayze e Jennifer Grey. Il brano portante della ...",
             "categories": ["romantic"],
+            "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 7,
+            "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2006/08/185/imm.jpg"
         },
@@ -60,7 +74,9 @@
             "title": "Una notte da leoni",
             "description": "(The Hangover) è un film del 2009 diretto da Todd Phillips, con Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha e Heather ...",
             "categories": ["comic", "adventure"],
+            "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 8,
+            "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
         },
@@ -68,7 +84,9 @@
             "title": "Una notte da leoni",
             "description": "(The Hangover) è un film del 2009 diretto da Todd Phillips, con Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha e Heather ...",
             "categories": ["comic", "adventure"],
+            "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 9,
+            "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
         },
@@ -76,7 +94,9 @@
             "title": "Una notte da leoni",
             "description": "(The Hangover) è un film del 2009 diretto da Todd Phillips, con Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha e Heather ...",
             "categories": ["comic", "adventure"],
+            "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 10,
+            "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
         },
@@ -84,7 +104,9 @@
             "title": "Una notte da leoni",
             "description": "(The Hangover) è un film del 2009 diretto da Todd Phillips, con Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha e Heather ...",
             "categories": ["comic", "adventure"],
+            "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 11,
+            "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
         },
@@ -92,7 +114,9 @@
             "title": "Una notte da leoni",
             "description": "(The Hangover) è un film del 2009 diretto da Todd Phillips, con Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha e Heather ...",
             "categories": ["comic", "adventure"],
+            "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 12,
+            "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
         },
@@ -100,7 +124,9 @@
             "title": "poba",
             "description": "(The Hangover) è un film del 2009 diretto da Todd Phillips, con Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha e Heather ...",
             "categories": ["comic", "adventure"],
+            "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 13,
+            "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
         }
