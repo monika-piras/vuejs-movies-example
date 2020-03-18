@@ -1,10 +1,10 @@
 <template>
 <div>
-  <h3>{{title}}</h3>
+  <h3 v-if="title">{{title}}</h3>
       <div class="scroll-parent">
        <button  class="move-left" @click="less()"><b-icon-chevron-left></b-icon-chevron-left></button>
         <ul class="scrollable">
-          <li v-for="film in this.films">
+          <li v-for="film in this.filmsToDisplay">
             <img v-bind:src="film.image"  @click="directDetails(film.id)"
                   class="pointer" alt="Image Film"/>
           </li>
@@ -24,34 +24,14 @@ export default {
   data() {
     return {
       filmList: [],
-      films: [],
+      filmsToDisplay: [],
     };
   },
   components: {},
-
-  methods: {
-    more() {
-      this.$el.querySelector(".scrollable").scrollLeft += +300;
-    },
-    less() {
-      this.$el.querySelector(".scrollable").scrollLeft += -300;
-    },
-    updateCategories() {
-      this.films = this.filmList.filter(item =>
-        item.categories.includes(this.category)
-      );
-    },
-
-    directDetails(id) {
-      console.log("numero id: " + id);
-      this.$router.push("/filmDetails/" + id);
-    }
-  },
-
   created: function() {
     console.log("ON-CREATED FilmList ");
     this.filmList = this.$store.getters.getFilms;
-    this.updateCategories();
+    this.updateListToDisplay();
 
     this.$store.watch(
       state => {
@@ -61,22 +41,32 @@ export default {
         //something changed do something
         console.log("watch: ", newValue);
         this.filmList = newValue;
-        this.updateCategories();
+        this.updateListToDisplay();
       },
       //Optional Deep if you need it
       {
         deep: true
       }
     );
-  }
-  /*  computed: {
-    totFilms() {
-      this.filmList = this.$store.getters.getFilms;
-      this.updateCategories();
+  },
+  methods: {
+    more() {
+      this.$el.querySelector(".scrollable").scrollLeft += +300;
+    },
+    less() {
+      this.$el.querySelector(".scrollable").scrollLeft += -300;
+    },
+    updateListToDisplay() {
+      this.filmsToDisplay = this.filmList.filter(item =>
+        item.categories.includes(this.category)
+      );
+    },
 
-      console.log("COMPUTED PROPERTY");
+    directDetails(id) {
+      console.log("numero id: " + id);
+      this.$router.push("/filmDetails/" + id);
     }
-  }  */
+  }
 };
 </script>
 <style>

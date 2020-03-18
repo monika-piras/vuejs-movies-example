@@ -31,8 +31,7 @@
   </div>
 
     <film-list title="Film Comici" category="comic" />
-    
-       <film-list title="Film Romantici"  category="romantic"/>
+    <film-list title="Film Romantici"  category="romantic"/>
     <film-list title="Film Avventura"  category="adventure"/>
 
 

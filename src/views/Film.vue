@@ -1,25 +1,24 @@
 <template>
   <div class="about">
-    <h1> ALL FILMS</h1>
-  <film-list/>
+    <h1 style="margin-bottom:40px;"> ALL FILMS</h1>
+  <film-list-all/>
+
   </div>
 </template>
 
 <script>
-import FilmList from '@/components/FilmList.vue'
+import FilmListAll from '@/components/FilmListAll.vue'
 
 export default {
   name: 'Film',
+   components: {
+    FilmListAll
+  },
   props:{
   },
   data() {
     return {
     };
   },
-  components: {
-    FilmList
-  }
 }
-
 </script>
-
