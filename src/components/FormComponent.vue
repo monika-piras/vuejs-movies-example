@@ -3,17 +3,19 @@
     <form @submit="checkForm">
       
       <div class="form-row align-items-center">
-        <div class="col-auto">
+
+          <div class="col-auto">
           <label class="left" for="inlineFormInput1">Title:</label>
-          <input class="form-control mb-2" id="inlineFormInput1" v-model="title" placeholder="title">
+          <input type="text" class="form-control mb-2" id="inlineFormInput1" v-model="title" placeholder="title">
           <div class= "testo" v-if="isErrorTitle">Title required.</div>
         </div>
 
-         <div class="col-auto">
+         <!-- <div class="col-auto">
           <label class="left" for="inlineFormInput2">Description:</label>
-          <input class="form-control mb-2" id="inlineFormInput2" v-model="description" placeholder="description">
+           <textarea name="message" class="form-control mb-2" id="inlineFormInput2" 
+              v-model="description" placeholder="description"></textarea>
           <div class= "testo" v-if="isErrorDescription"> Description required. </div>
-        </div>
+        </div> -->
         
         <div class="col-auto">
           <button type="submit" class="btn btn-primary mb-2" >Add Film</button>
@@ -32,9 +34,9 @@ export default {
   data: function() {
     return {
       title: null,
-      isErrorTitle: false,
-      description: null,
-      isErrorDescription: false
+      isErrorTitle: false
+      // description: null,
+      // isErrorDescription: false
     };
   },
 
@@ -57,12 +59,12 @@ export default {
 
     resetForm() {
       this.title = "";
-      this.description = "";
+      // this.description = "";
     },
 
     resetErrors() {
       this.isErrorTitle = false;
-      this.isErrorDescription = false;
+      // this.isErrorDescription = false;
     },
 
     compileHTMLErrors() {
@@ -72,14 +74,14 @@ export default {
         this.isErrorTitle = true;
       }
 
-      if (!this.description || !this.hasMinLength(this.description, 5)) {
-        this.isErrorDescription = true;
-      }
+      // if (!this.description || !this.hasMinLength(this.description, 5)) {
+      //   this.isErrorDescription = true;
+      // }
     },
 
     formHasErrors() {
       var risultato = false;
-      if (this.isErrorTitle || this.isErrorDescription) {
+      if (this.isErrorTitle /*|| this.isErrorDescription*/) {
         risultato = true;
       }
       return risultato;
@@ -90,7 +92,18 @@ export default {
     },
 
     save() {
+      const film = {
+        title: this.title
+      };
+
       console.log("save qualcosa ..");
+
+      if (this.title) {
+        this.$store.dispatch("callActionAddFilm", film);
+        this.$router.push("../film");
+      } else {
+        console.log("No update Film");
+      }
     }
   }
 };

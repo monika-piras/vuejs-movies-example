@@ -1,8 +1,9 @@
 <template>
 <div>
     <ul class="scrollable">
-        <li v-for="film in this.allFilms">
-            <img v-bind:src="film.image"  @click="directDetails(film.id)"
+        <li v-for="elementoCorrente in this.allFilms">
+          <!-- titolo: {{elementoCorrente.title}} -->
+            <img v-bind:src="elementoCorrente.image"  @click="directDetails(elementoCorrente.id)"
                   class="pointer" alt="Image Film"/>
         </li>
     </ul>
@@ -12,9 +13,11 @@
 <script>
 export default {
   name: "FilmListAll",
-  props: {},
+  props: {
+  },
   data() {
-    return {};
+    return {
+    };
   },
   components: {},
 

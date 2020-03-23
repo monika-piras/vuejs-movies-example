@@ -14,8 +14,12 @@
       </div>
       <div class="col">
         <p>CAST:{{filmDetail.cast}}</p>
-
-<iframe width="560" height="315" v-bind:src="filmDetail.trailerPath" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" v-bind:src="filmDetail.trailerPath" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div>
+        <label for="">Preferiti</label>
+        <star v-model="film.prefer"></star>
+        <p>Preferito: {{film.prefer}}</p>
+      </div>
       </div>
     </div>
   </div>    
@@ -23,13 +27,20 @@
 
 
 <script>
+import Star from "@/components/Star.vue";
 export default {
   name: "FilmDetails",
   props: {},
   data() {
-    return {};
+    return {
+      'film': {
+        'prefer': false
+      }
+    };
   },
-  components: {},
+  components: {
+    Star
+  },
   created() {
     console.log("creato dettaglio");
   },
