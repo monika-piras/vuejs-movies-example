@@ -10,13 +10,16 @@
           <div class= "testo" v-if="isErrorTitle">Title required.</div>
         </div>
 
-         <!-- <div class="col-auto">
+          <div class="col-auto">
           <label class="left" for="inlineFormInput2">Description:</label>
            <textarea name="message" class="form-control mb-2" id="inlineFormInput2" 
               v-model="description" placeholder="description"></textarea>
           <div class= "testo" v-if="isErrorDescription"> Description required. </div>
-        </div> -->
+        </div> 
         
+        <div>
+          <star></star>
+        </div>
         <div class="col-auto">
           <button type="submit" class="btn btn-primary mb-2" >Add Film</button>
         </div>
@@ -27,16 +30,19 @@
 </template>
 
 <script>
+import Star from "@/components/Star.vue";
 export default {
   name: "FormComponent",
-
+  components: {
+    Star
+  },
   props: {},
   data: function() {
     return {
       title: null,
-      isErrorTitle: false
-      // description: null,
-      // isErrorDescription: false
+      isErrorTitle: false,
+      description: null,
+      isErrorDescription: false
     };
   },
 
@@ -59,12 +65,12 @@ export default {
 
     resetForm() {
       this.title = "";
-      // this.description = "";
+      this.description = "";
     },
 
     resetErrors() {
       this.isErrorTitle = false;
-      // this.isErrorDescription = false;
+      this.isErrorDescription = false;
     },
 
     compileHTMLErrors() {
@@ -74,14 +80,14 @@ export default {
         this.isErrorTitle = true;
       }
 
-      // if (!this.description || !this.hasMinLength(this.description, 5)) {
-      //   this.isErrorDescription = true;
-      // }
+      if (!this.description || !this.hasMinLength(this.description, 5)) {
+        this.isErrorDescription = true;
+      }
     },
 
     formHasErrors() {
       var risultato = false;
-      if (this.isErrorTitle /*|| this.isErrorDescription*/) {
+      if (this.isErrorTitle || this.isErrorDescription) {
         risultato = true;
       }
       return risultato;

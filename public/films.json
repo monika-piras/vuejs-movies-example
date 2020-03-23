@@ -6,6 +6,7 @@
             "categories": ["romantic", "comic"],
             "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 1,
+            "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"",
             "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIX0zX-QOI-gaC473n51sbXIqobgEGnbL86fCk0JmHkXThrPRX"
@@ -16,6 +17,7 @@
             "categories": ["comic", "top-rated"],
             "cast": " Checco Zalone, Eleonora Giovanardi, Sonia Bergamasco, Maurizio Micheli, Ludovica Modugno",
             "id" : 2,
+            "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/t3al1PBx09A",
             "imageHd":"https://www.movietele.it/files/images/2016/04/quo-vado-di-zalone-in-dvd-blu-ray.jpg",
             "image": "https://pad.mymovies.it/filmclub/2015/11/022/locandina.jpg"
@@ -26,6 +28,7 @@
             "categories": ["romantic", "top-rated"],
             "cast": "  Tiffany Dupont, Luke Goss e John Noble",
             "id" : 3,
+            "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/HgRR322ezUE",
             "imageHd":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQpEmk-oa0J0_eLxSQfuvGpnE6vPhsQvuz31jCbczLo86ly5xae",
             "image": "https://resources5.eaglepictures.com/image/1/400/600/5bd1db5d0ed52/one-night-with-the-king-una-notte-con-il-re-cover.jpg"
@@ -36,6 +39,7 @@
             "categories": ["adventure", "top-rated"],
             "cast": " Harrison Ford, Karen Allen, John Rhys-Davies, Alfred Molina",
             "id" : 4,
+            "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/eEvEK4kJcr0",
             "imageHd":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_9c8fTxtpEW1q98q2VwmBLzOrxTPTVge7GSk6NB4thnN0S83a",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTphCa50-9QAmsVxZ13pUyKbCIHoS610tu3Hf7Dr1a-J4pfKkKJ"
@@ -46,6 +50,7 @@
             "categories": ["adventure"],
             "cast": " Harrison Ford, Kate Capshaw, Ke Huy Quan, Pat Roach",
             "id" : 5,
+            "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/WqnEk15YBOw",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2006/08/064/locandina.jpg"
@@ -56,6 +61,7 @@
             "categories": ["comic", "adventure"],
             "cast": " Todd Phillips con Bradley Cooper, Heather Graham, Zach Galifianakis, Ed Helms",
             "id" : 6,
+            "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/rp5T9sSkybY",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
@@ -66,6 +72,7 @@
             "categories": ["romantic"],
             "cast": " Patrick Swayze as Johnny Castle. Jennifer Grey as Frances “Baby” Houseman. Cynthia Rhodes as Penny Johnson. Jerry Orbach as Jake Houseman. Jane Brucker as Lisa Houseman. Jack Weston as Max Kellerman. Lonny Price as Neil Kellerman. Kelly Bishop as Marjorie Houseman.",
             "id" : 7,
+            "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/wcra0-0Gu4U",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2006/08/185/imm.jpg"
@@ -76,6 +83,7 @@
             "categories": ["comic", "adventure"],
             "cast": " Todd Phillips con Bradley Cooper, Heather Graham, Zach Galifianakis, Ed Helms",
             "id" : 8,
+            "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/rp5T9sSkybY",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
@@ -86,6 +94,7 @@
             "categories": ["comic", "adventure"],
             "cast": " Todd Phillips con Bradley Cooper, Heather Graham, Zach Galifianakis, Ed Helms",
             "id" : 9,
+            "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
@@ -96,6 +105,7 @@
             "categories": ["comic", "adventure"],
             "cast": " Todd Phillips con Bradley Cooper, Heather Graham, Zach Galifianakis, Ed Helms",
             "id" : 10,
+            "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/rp5T9sSkybY",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
@@ -106,6 +116,7 @@
             "categories": ["comic", "adventure"],
             "cast": " Todd Phillips con Bradley Cooper, Heather Graham, Zach Galifianakis, Ed Helms",
             "id" : 11,
+            "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
@@ -116,6 +127,7 @@
             "categories": ["comic", "adventure"],
             "cast": " Todd Phillips con Bradley Cooper, Heather Graham, Zach Galifianakis, Ed Helms",
             "id" : 12,
+            "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/rp5T9sSkybY",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
@@ -126,6 +138,7 @@
             "categories": ["comic", "adventure"],
             "cast": " Todd Phillips con Bradley Cooper, Heather Graham, Zach Galifianakis, Ed Helms",
             "id" : 13,
+            "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/rp5T9sSkybY",
             "imageHd":"",
             "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
