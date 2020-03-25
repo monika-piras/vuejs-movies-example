@@ -19,12 +19,13 @@ export default {
   name: "FilmList",
   props: {
     title: String,
-    category: String
+    category: String,
+    prefer: Boolean
   },
   data() {
     return {
       filmList: [],
-      filmsToDisplay: [],
+      filmsToDisplay: []
     };
   },
   components: {},
@@ -57,9 +58,14 @@ export default {
       this.$el.querySelector(".scrollable").scrollLeft += -300;
     },
     updateListToDisplay() {
-      this.filmsToDisplay = this.filmList.filter(item =>
-        item.categories.includes(this.category)
-      );
+      if (this.category) {
+        this.filmsToDisplay = this.filmList.filter(item =>
+          item.categories.includes(this.category)
+        );
+      }
+      else {
+        this.filmsToDisplay = this.filmList.filter(item=> item.prefer===true);
+      }
     },
 
     directDetails(id) {
@@ -115,8 +121,8 @@ export default {
 .scroll-parent {
   position: relative;
 }
-button{
-  outline:none !important;
+button {
+  outline: none !important;
 }
 </style>
 

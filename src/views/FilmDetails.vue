@@ -18,7 +18,7 @@
      
        <div>
         <label for="">Preferiti</label>
-        <star v-on:starValueChanged="cambia()" v-bind:valore="filmDetail.prefer"></star>
+        <star v-model="filmDetail.prefer"></star>
         <p>Preferito: {{filmDetail.prefer}}</p>
       </div> 
       </div>
@@ -43,9 +43,6 @@ export default {
     console.log("creato dettaglio");
   },
   methods: {
-    cambia() {
-      this.filmDetail.prefer = !this.filmDetail.prefer;
-    },
     goBack() {
       this.$router.push("../");
     }

@@ -6,7 +6,8 @@
 
           <div class="col-auto">
           <label class="left" for="inlineFormInput1">Title:</label>
-          <input type="text" class="form-control mb-2" id="inlineFormInput1" v-model="title" placeholder="title">
+          <input type="text" class="form-control mb-2" id="inlineFormInput1"
+            v-model="title" placeholder="title">
           <div class= "testo" v-if="isErrorTitle">Title required.</div>
         </div>
 
@@ -18,7 +19,7 @@
         </div> 
         
         <div>
-          <star></star>
+          <star v-model="prefer"></star>
         </div>
         <div class="col-auto">
           <button type="submit" class="btn btn-primary mb-2" >Add Film</button>
@@ -36,13 +37,17 @@ export default {
   components: {
     Star
   },
-  props: {},
+  props: {
+
+  },
   data: function() {
     return {
       title: null,
       isErrorTitle: false,
       description: null,
-      isErrorDescription: false
+      isErrorDescription: false,
+      prefer: false,
+      id: Math.random()*10
     };
   },
 
@@ -99,7 +104,10 @@ export default {
 
     save() {
       const film = {
-        title: this.title
+        title: this.title,
+        description: this.description,
+        prefer: this.prefer,
+        id: this.id
       };
 
       console.log("save qualcosa ..");

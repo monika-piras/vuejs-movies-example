@@ -1,8 +1,8 @@
 <template>
  
   <div @click="change()" style="cursor:pointer;"> 
-      <i v-if="valore" class="material-icons">star</i>
-      <i v-if="!valore" class="material-icons">star_border</i>
+      <i v-if="value" class="material-icons">star</i>
+      <i v-if="!value" class="material-icons">star_border</i>
  </div> 
  
 </template>
@@ -10,14 +10,15 @@
 export default {
   name: "Star",
   props: {
-    valore: Boolean
+    value:Boolean
   },
   data() {
-    return {};
+    return {
+    };
   },
   methods: {
     change() {
-      this.$emit("starValueChanged");
+      this.$emit("input", !this.value);
     }
   }
 };
