@@ -91,7 +91,7 @@ export default {
 .scroll-parent li > img {
   margin: 0;
   height: 300px;
-  width: auto;
+  width: 200px;
 }
 .scroll-parent:first-child {
   margin-left: 50px;

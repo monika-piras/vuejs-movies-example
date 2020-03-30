@@ -2,12 +2,14 @@
   <div id="app">
     <NavigationBar/>
     <router-view/>
-    </div>
+    <footer-component/>
   </div>
 </template>
 <script>
 
 import NavigationBar from "@/components/NavigationBar.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
+
 import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
@@ -17,7 +19,8 @@ Vue.use(BootstrapVue)
 export default {
   name: "App",
   components: {
-    NavigationBar
+    NavigationBar,
+    FooterComponent
   },
   created: function() {
     // `this` points to the vm instance
@@ -53,4 +56,5 @@ export default {
 .left {
   text-align: left;
 }
+
 </style>

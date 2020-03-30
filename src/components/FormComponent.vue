@@ -25,14 +25,14 @@
         </div> 
 
         <div class="col-auto">
-          <input type="checkbox" id="romantic" value="romantic" v-model="checkedCategories">
-          <label for="romantic">Romantic</label>
+          <input type="checkbox"  id="romantic" value="romantic" v-model="checkedCategories">
+          <label for="romantic" style="margin-right:10px;">Romantic</label>
           <input type="checkbox" id="comic" value="comic" v-model="checkedCategories">
-          <label for="comic">Comic</label>
+          <label for="comic" style="margin-right:10px;">Comic</label>
           <input type="checkbox" id="adventure" value="adventure" v-model="checkedCategories">
-          <label for="adventure">Adventure</label>
+          <label for="adventure" style="margin-right:10px;">Adventure</label>
           <input type="checkbox" id="top-rated" value="top-rated" v-model="checkedCategories">
-          <label for="top-rated">Top-rated</label>
+          <label for="top-rated" style="margin-right:10px;">Top-rated</label>
         <!-- <span>Checked categories: {{ checkedCategories }}</span> -->
         </div> 
 
@@ -42,9 +42,17 @@
               v-model="cast" placeholder="cast"></textarea>
           <!-- <div class= "testo" v-if="isErrorDescription"> Cast required. </div> -->
         </div> 
-        
-        <div>
-          <star v-model="prefer"></star>
+
+        <div class="col-auto">
+          <label class="left" for="inlineFormInput5">Image:</label>
+          <input type="text" class="form-control mb-2" id="inlineFormInput5"
+            v-model="image" placeholder="image code">
+        </div>
+
+        <div class="col-auto">
+          <label class="left" for="inlineFormInput6">Image HD:</label>
+          <input type="text" class="form-control mb-2" id="inlineFormInput6"
+            v-model="imageHd" placeholder="image HD code">
         </div>
 
         <div class="col-auto">
@@ -53,9 +61,13 @@
             v-model="trailer" placeholder="trailer embeded code">
         </div>
 
+        <div>
+          <star style= "margin:30px;" v-model="prefer"></star>
+        </div>
 
         <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-2" >Add Film</button>
+          <button style= "margin:30px;" 
+          type="submit" class="btn btn-primary mb-2">Add Film</button>
         </div>
 
       </div>
@@ -82,6 +94,8 @@ export default {
       cast: null,
       // isErrorDescription: false,
       prefer: false,
+      image: null,
+      imageHd: null,
       trailer: null,
       id: Math.random()*10
     };
@@ -146,6 +160,8 @@ export default {
         categories: this.checkedCategories,
         cast: this.cast,
         prefer: this.prefer,
+        image: this.image,
+        imageHd: this.imageHd,
         trailerPath: this.trailer,
         id: this.id
       };
