@@ -3,7 +3,7 @@
     <ul class="scrollable">
         <li v-for="elementoCorrente in this.allFilms">
           <!-- titolo: {{elementoCorrente.title}} -->
-            <img v-bind:src="elementoCorrente.image"  @click="directDetails(elementoCorrente.id)"
+          <img v-bind:src="elementoCorrente.image"  @click="directDetails(elementoCorrente.id)"
                   class="pointer" alt="Image Film"/>
         </li>
     </ul>
@@ -13,8 +13,7 @@
 <script>
 export default {
   name: "FilmListAll",
-  props: {
-  },
+  props: ['search'],
   data() {
     return {
     };
@@ -30,7 +29,11 @@ export default {
 
   computed: {
     allFilms() {
-      return this.$store.getters.getFilms;
+      if(this.search){
+          return this.$store.getters.getFilms.filter((item)=>item.title.toLowerCase().includes(this.search.toLowerCase()));
+      }else{
+        return this.$store.getters.getFilms;
+      }
     }
   }
 };

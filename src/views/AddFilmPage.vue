@@ -14,7 +14,7 @@
 import FormComponent from "@/components/FormComponent.vue";
 
 export default {
-  name: 'AddFilm',
+  name: 'AddFilmPage',
    components: {
     FormComponent
   },

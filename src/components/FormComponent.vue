@@ -103,19 +103,22 @@ export default {
 
   methods: {
     checkForm: function(event) {
+
       this.compileHTMLErrors();
 
       var isFormInvalid = false;
       isFormInvalid = this.formHasErrors();
-
       //se il form ha errori
       if (isFormInvalid) {
+              
         return; //ti fermi qui
       }
 
       //altrimenti
       this.save();
       this.resetForm();
+
+      event.preventDefault();
     },
 
     resetForm() {

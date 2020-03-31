@@ -31,7 +31,7 @@
 import Star from "@/components/Star.vue";
 import FormComponent from "@/components/FormComponent.vue";
 export default {
-  name: "FilmDetails",
+  name: "FilmDetailsPage",
   props: {},
   data() {
     return {};
