@@ -75,8 +75,7 @@ export default {
   }
 };
 </script>
-<style>
-
+<style scoped>
 .scroll-parent ul {
   display: flex;
   overflow: hidden;
@@ -131,4 +130,3 @@ button {
   outline: none !important;
 }
 </style>
-
