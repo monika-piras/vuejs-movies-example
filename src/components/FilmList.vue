@@ -4,9 +4,9 @@
       <div class="scroll-parent">
        <button  class="move-left" @click="less()"><b-icon-chevron-left></b-icon-chevron-left></button>
         <ul class="scrollable">
-          <li v-for="film in this.filmsToDisplay">
-            <img v-bind:src="film.image"  @click="directDetails(film.id)"
-                  class="pointer" alt="Image Film"/>
+          <li v-for="film in this.filmsToDisplay" @click="directDetails(film.id)">
+            <img v-bind:src="film.image"  
+                 alt="Image Film"/>
           </li>
         </ul>
       <button class="move-right" @click="more()"><b-icon-chevron-right></b-icon-chevron-right></button>
@@ -76,9 +76,7 @@ export default {
 };
 </script>
 <style>
-.pointer {
-  cursor: pointer;
-}
+
 .scroll-parent ul {
   display: flex;
   overflow: hidden;
@@ -87,6 +85,14 @@ export default {
 }
 .scroll-parent li {
   margin: 0 0.3rem;
+}
+.scroll-parent li:hover {
+  background: rgba(179, 179, 204, 0.5);
+  cursor: pointer;
+}
+.scroll-parent img {
+   position: relative;
+    z-index: -1;
 }
 .scroll-parent li > img {
   margin: 0;

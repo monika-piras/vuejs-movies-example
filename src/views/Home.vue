@@ -20,7 +20,7 @@
       
         <template v-for="film in this.topRatedFilms"  >
           <b-carousel-slide v-bind:img-src="film.imageHd" :key="film.id">
-            <h1 @click="directDetails(film.id)" class="pointer">{{film.title}}</h1>
+            <h1 @click="directDetails(film.id)" style="cursor:pointer;">{{film.title}}</h1>
           </b-carousel-slide>
         </template>
     </b-carousel> 

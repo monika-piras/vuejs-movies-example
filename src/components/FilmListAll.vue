@@ -3,8 +3,10 @@
     <ul class="scrollable">
         <li v-for="elementoCorrente in this.allFilms">
           <!-- titolo: {{elementoCorrente.title}} -->
-          <img v-bind:src="elementoCorrente.image"  @click="directDetails(elementoCorrente.id)"
-                  class="pointer" alt="Image Film"/>
+          <div class="image" @click="directDetails(elementoCorrente.id)">
+            <img v-bind:src="elementoCorrente.image"  
+               alt="Image Film"/>
+          </div>
         </li>
     </ul>
 </div>
@@ -52,5 +54,14 @@ li {
 img {
   width: 190px;
   height: 300px;
+}
+
+li:hover .image{    
+    background: rgba(179, 179, 204, 0.5);
+    cursor: pointer;
+}
+img {
+    position: relative;
+    z-index: -1;
 }
 </style>
