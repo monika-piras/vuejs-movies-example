@@ -4,8 +4,8 @@
       <div class="scroll-parent">
        <button  class="move-left" @click="less()"><b-icon-chevron-left></b-icon-chevron-left></button>
         <ul class="scrollable">
-          <li v-for="film in this.filmsToDisplay" >
-             <star class="star" v-model="film.prefer"/> 
+          <li v-for="film in this.filmsToDisplay" class="relative" >
+            <i v-if="film.prefer" class="material-icons star">star</i>
             <img v-bind:src="film.image"  @click="directDetails(film.id)"
                  alt="Image Film"/>
           </li>
@@ -16,12 +16,9 @@
 </template>
 
 <script>
-import Star from "@/components/Star.vue";
 export default {
   name: "FilmList",
-  components: {
-    Star
-  },
+  components: {},
 
   props: {
     title: String,
@@ -97,16 +94,17 @@ export default {
   position: relative;
 }
 
-.scroll-parent li:hover .star {
-  opacity: 1;
+.relative {
+  position: relative;
 }
-
 .star {
-  opacity: 0 ; 
+  color: #e0e03e;
   position: absolute;
-  top: 10px;
-  right: 15px;
-  background-color: rgba(148, 148, 184, 0.8);
+  top: 0;
+  right: 0;
+  border: 1px solid gray;
+  opacity: 1;
+  background-color: rgb(251, 251, 251);
   z-index: 2;
 }
 .scroll-parent li > img {

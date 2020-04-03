@@ -8,10 +8,6 @@
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item router-link to="/film">Film</b-nav-item>
-        <b-nav-item router-link to="/addFilm"><button class="add-button">
-          <b-icon-plus></b-icon-plus></button>
-          <!-- <i class="material-icons">add</i></button> -->
-        </b-nav-item>
         <!-- <b-nav-item router-link to="/filmDetails" disabled>Film Details</b-nav-item> -->
       </b-navbar-nav>
 
@@ -64,7 +60,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped >
-.add-button {
+/* .add-button {
   position: fixed;
   bottom: 10px;
   right: 10px;
@@ -81,6 +77,6 @@ export default {
   background: #808080;
   color: black;
   border: 1px solid #737373;
-}
+} */
 
 </style>
