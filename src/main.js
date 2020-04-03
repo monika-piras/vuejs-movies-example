@@ -4,7 +4,7 @@ import router from './router';
 import store from './store';
 import './registerServiceWorker';
 
-import { BootstrapVue,BIcon, BIconChevronLeft, BIconChevronRight} from 'bootstrap-vue';
+import { BootstrapVue,BIcon, BIconChevronLeft, BIconChevronRight,BIconPlus} from 'bootstrap-vue';
 
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
@@ -12,6 +12,7 @@ Vue.use(BootstrapVue);
 Vue.component('BIcon', BIcon);
 Vue.component('BIconChevronLeft', BIconChevronLeft);
 Vue.component('BIconChevronRight', BIconChevronRight);
+Vue.component('BIconPlus', BIconPlus);
 
 Vue.config.productionTip = false;
 

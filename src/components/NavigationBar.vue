@@ -8,7 +8,10 @@
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item router-link to="/film">Film</b-nav-item>
-        <b-nav-item router-link to="/addFilm">Add Film</b-nav-item>
+        <b-nav-item router-link to="/addFilm"><button class="add-button">
+          <b-icon-plus></b-icon-plus></button>
+          <!-- <i class="material-icons">add</i></button> -->
+        </b-nav-item>
         <!-- <b-nav-item router-link to="/filmDetails" disabled>Film Details</b-nav-item> -->
       </b-navbar-nav>
 
@@ -43,18 +46,17 @@
 <script>
 export default {
   name: "NavigationBar",
-  
-  props:{
-  },
+
+  props: {},
   data() {
     return {
-      title: null
+      title: null,
     };
   },
-   
+
   methods: {
     search(title) {
-       this.$router.push("/film/" + this.title)
+      this.$router.push("/film/" + this.title);
     }
   }
 };
@@ -62,5 +64,23 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped >
- 
+.add-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border: 1px solid  #4d4d4d;
+  background: #999;
+  color: #fff;
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 4px;
+  z-index: 2;
+  outline: none;
+}
+.add-button:hover {
+  background: #808080;
+  color: black;
+  border: 1px solid #737373;
+}
+
 </style>

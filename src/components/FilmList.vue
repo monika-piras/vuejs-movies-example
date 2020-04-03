@@ -4,8 +4,9 @@
       <div class="scroll-parent">
        <button  class="move-left" @click="less()"><b-icon-chevron-left></b-icon-chevron-left></button>
         <ul class="scrollable">
-          <li v-for="film in this.filmsToDisplay" @click="directDetails(film.id)">
-            <img v-bind:src="film.image"  
+          <li v-for="film in this.filmsToDisplay" >
+             <star class="star" v-model="film.prefer"/> 
+            <img v-bind:src="film.image"  @click="directDetails(film.id)"
                  alt="Image Film"/>
           </li>
         </ul>
@@ -15,8 +16,13 @@
 </template>
 
 <script>
+import Star from "@/components/Star.vue";
 export default {
   name: "FilmList",
+  components: {
+    Star
+  },
+
   props: {
     title: String,
     category: String,
@@ -28,7 +34,6 @@ export default {
       filmsToDisplay: []
     };
   },
-  components: {},
   created: function() {
     console.log("ON-CREATED FilmList ");
     this.filmList = this.$store.getters.getFilms;
@@ -62,9 +67,10 @@ export default {
         this.filmsToDisplay = this.filmList.filter(item =>
           item.categories.includes(this.category)
         );
-      }
-      else {
-        this.filmsToDisplay = this.filmList.filter(item=> item.prefer===true);
+      } else {
+        this.filmsToDisplay = this.filmList.filter(
+          item => item.prefer === true
+        );
       }
     },
 
@@ -86,12 +92,22 @@ export default {
   margin: 0 0.3rem;
 }
 .scroll-parent li:hover {
-  background: rgba(179, 179, 204, 0.5);
+  /* background: rgba(179, 179, 204, 0.5); */
   cursor: pointer;
+  position: relative;
 }
-.scroll-parent img {
-   position: relative;
-    z-index: -1;
+
+.scroll-parent li:hover .star {
+  opacity: 1;
+}
+
+.star {
+  opacity: 0 ; 
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: rgba(148, 148, 184, 0.8);
+  z-index: 2;
 }
 .scroll-parent li > img {
   margin: 0;

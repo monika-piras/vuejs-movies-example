@@ -183,7 +183,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .left {
   float: left;
 }
@@ -199,5 +199,6 @@ export default {
 .rossoContinent {
   margin-bottom: 5px;
 }
+
 </style>
 
