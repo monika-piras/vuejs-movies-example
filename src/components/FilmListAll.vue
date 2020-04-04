@@ -1,17 +1,15 @@
 <template>
-<div>
+  <div>
     <ul class="scrollable">
-        <li v-for="elementoCorrente in this.allFilms">
-          <!-- titolo: {{elementoCorrente.title}} -->
-          <div class="image">
-            <star class="star" v-bind:class="{ 'isPreferred':elementoCorrente.prefer }" 
-              v-model="elementoCorrente.prefer"/>
-            <img v-bind:src="elementoCorrente.image"  
-               alt="Image Film"  @click="directDetails(elementoCorrente.id)"/>
-          </div>
-        </li>
+      <li v-for="elementoCorrente in this.allFilms">
+        <!-- titolo: {{elementoCorrente.title}} -->
+        <div class="image">
+          <star class="star" v-bind:class="{ 'isPreferred':elementoCorrente.prefer }" v-model="elementoCorrente.prefer" />
+          <img v-bind:src="elementoCorrente.image" alt="Image Film" @click="directDetails(elementoCorrente.id)" />
+        </div>
+      </li>
     </ul>
-</div>
+  </div>
 </template>
 
 <script>
@@ -24,15 +22,13 @@ export default {
   props: ["search"],
 
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     directDetails(id) {
       console.log("numero id: " + id);
       this.$router.push("/filmDetails/" + id);
-    },
-   
+    }
   },
 
   computed: {
@@ -63,21 +59,21 @@ img {
   width: 190px;
   height: 300px;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
- 
+
 .image:hover {
   /* background: rgba(179, 179, 204, 0.5); */
   cursor: pointer;
 }
 
-.image:hover .star{
+.image:hover .star {
   opacity: 1;
 }
 .isPreferred {
   opacity: 1 !important;
 }
-.image{
+.image {
   position: relative;
 }
 
@@ -88,5 +84,5 @@ img {
   right: 15px;
   background-color: rgba(148, 148, 184, 0.8);
   z-index: 2;
-} 
+}
 </style>

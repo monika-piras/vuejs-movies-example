@@ -1,18 +1,21 @@
 <template>
-<div>
-  <h3 v-if="title">{{title}}</h3>
-      <div class="scroll-parent">
-       <button  class="move-left" @click="less()"><b-icon-chevron-left></b-icon-chevron-left></button>
-        <ul class="scrollable">
-          <li v-for="film in this.filmsToDisplay" class="relative" >
-            <i v-if="film.prefer" class="material-icons star">star</i>
-            <img v-bind:src="film.image"  @click="directDetails(film.id)"
-                 alt="Image Film"/>
-          </li>
-        </ul>
-      <button class="move-right" @click="more()"><b-icon-chevron-right></b-icon-chevron-right></button>
-      </div>
-</div>
+  <div>
+    <h3 v-if="title">{{title}}</h3>
+    <div class="scroll-parent">
+      <button class="move-left" @click="less()">
+        <b-icon-chevron-left></b-icon-chevron-left>
+      </button>
+      <ul class="scrollable">
+        <li v-for="film in this.filmsToDisplay" class="relative">
+          <i v-if="film.prefer" class="material-icons star">star</i>
+          <img v-bind:src="film.image" @click="directDetails(film.id)" alt="Image Film" />
+        </li>
+      </ul>
+      <button class="move-right" @click="more()">
+        <b-icon-chevron-right></b-icon-chevron-right>
+      </button>
+    </div>
+  </div>
 </template>
 
 <script>

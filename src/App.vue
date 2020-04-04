@@ -6,15 +6,14 @@
   </div>
 </template>
 <script>
-
 import NavigationBar from "@/components/NavigationBar.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
-import Vue from 'vue'
-import { BootstrapVue, IconsPlugin} from 'bootstrap-vue'
+import Vue from "vue";
+import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 
 // Install BootstrapVue
-Vue.use(BootstrapVue)
+Vue.use(BootstrapVue);
 
 export default {
   name: "App",
@@ -56,5 +55,4 @@ export default {
 .left {
   text-align: left;
 }
-
 </style>

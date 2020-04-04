@@ -2,37 +2,25 @@
   <div class="hello">
     <h1>{{msg}}</h1>
 
-<div>
-    <b-carousel 
-      id="carousel-1"
-      v-model="slide"
-      :interval="4000"
-      controls
-      indicators
-      background="#ababab"
-      img-width="1024"
-      img-height="480"
-      style="text-shadow: 1px 1px 2px #333;"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-    >
-      <!-- Slides with custom text -->
-      
-        <template v-for="film in this.topRatedFilms"  >
+    <div>
+      <b-carousel id="carousel-1" v-model="slide" :interval="4000" controls indicators background="#ababab" img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px #333;" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
+        <!-- Slides with custom text -->
+
+        <template v-for="film in this.topRatedFilms">
           <b-carousel-slide v-bind:img-src="film.imageHd" :key="film.id">
             <h1 @click="directDetails(film.id)" style="cursor:pointer;">{{film.title}}</h1>
           </b-carousel-slide>
         </template>
-    </b-carousel> 
-    <!-- <p class="mt-4">
+      </b-carousel>
+      <!-- <p class="mt-4">
       Slide #: {{ slide }}<br>
       Sliding: {{ sliding }}
     </p> -->
-  </div>
+    </div>
 
     <film-list title="Film Comici" category="comic" />
-    <film-list title="Film Romantici"  category="romantic"/>
-    <film-list title="Film Avventura"  category="adventure"/>
+    <film-list title="Film Romantici" category="romantic" />
+    <film-list title="Film Avventura" category="adventure" />
     <film-list title="Film Preferiti" prefer/>
   </div>
 </template>

@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import FilmsPage from '../views/FilmsPage.vue'
 import FilmDetailsPage from '../views/FilmDetailsPage.vue'
-import AddFilmPage from '../views/AddFilmPage.vue' 
+import AddFilmPage from '../views/AddFilmPage.vue'
 
 Vue.use(VueRouter)
 
@@ -37,12 +37,12 @@ const routes = [
     name: 'addFilm',
     component: AddFilmPage
   }
-  
+
 ]
 
 const router = new VueRouter({
   linkExactActiveClass: "active",
-  
+
   routes
 })
 

@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <div class="row">
-        <div class="col-auto left">
-            <b-button style= "margin-top:30px; margin-bottom:30px;" 
-            v-on:click="goBack()"><b-icon-chevron-left></b-icon-chevron-left>Back</b-button>
-          </div>
+      <div class="col-auto left">
+        <b-button style="margin-top:30px; margin-bottom:30px;" v-on:click="goBack()">
+          <b-icon-chevron-left></b-icon-chevron-left>Back</b-button>
+      </div>
     </div>
-          <form-component/>
+    <form-component/>
   </div>
 </template>
 
@@ -14,23 +14,20 @@
 import FormComponent from "@/components/FormComponent.vue";
 
 export default {
-  name: 'AddFilmPage',
-   components: {
+  name: "AddFilmPage",
+  components: {
     FormComponent
   },
-  props:{
-  },
+  props: {},
   data() {
-    return {
-    };
+    return {};
   },
-   methods: {
+  methods: {
     goBack() {
       this.$router.push("/film");
     }
   }
-}
-
+};
 </script>
 <style scoped>
 

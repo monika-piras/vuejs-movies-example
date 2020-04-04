@@ -1,76 +1,66 @@
 <template>
   <div>
     <form @submit="checkForm">
-      
-      <div class="form-row align-items-center">
 
-        <div class="col-auto">
-          <label class="left" for="inlineFormInput1">Title:</label>
-          <input type="text" class="form-control mb-2" id="inlineFormInput1"
-            v-model="title" placeholder="title">
-          <div class= "testo" v-if="isErrorTitle">Title required.</div>
-        </div>
-
-           <!-- <div class="col-auto">
-          <label class="left" for="inlineFormInput4">Image:</label>
-          <input type="image" src="../../public/img/bee.jpg" name="STOP" class="form-control mb-2"
-          width="25" height="25" align="top" alt="Stop sign" id="inlineFormInput4" v-model="image">
-        </div>  -->
-
-        <div class="col-auto">
-          <label class="left" for="inlineFormInput2">Description:</label>
-           <textarea name="message" class="form-control mb-2" id="inlineFormInput2" 
-              v-model="description" placeholder="description"></textarea>
-          <!-- <div class= "testo" v-if="isErrorDescription"> Description required. </div> -->
-        </div> 
-
-        <div class="col-auto">
-          <input type="checkbox"  id="romantic" value="romantic" v-model="checkedCategories">
-          <label for="romantic" style="margin-right:10px;">Romantic</label>
-          <input type="checkbox" id="comic" value="comic" v-model="checkedCategories">
-          <label for="comic" style="margin-right:10px;">Comic</label>
-          <input type="checkbox" id="adventure" value="adventure" v-model="checkedCategories">
-          <label for="adventure" style="margin-right:10px;">Adventure</label>
-          <input type="checkbox" id="top-rated" value="top-rated" v-model="checkedCategories">
-          <label for="top-rated" style="margin-right:10px;">Top-rated</label>
-        <!-- <span>Checked categories: {{ checkedCategories }}</span> -->
-        </div> 
-
-        <div class="col-auto">
-          <label class="left" for="inlineFormInput3">Cast:</label>
-           <textarea name="message" class="form-control mb-2" id="inlineFormInput3" 
-              v-model="cast" placeholder="cast"></textarea>
-          <!-- <div class= "testo" v-if="isErrorDescription"> Cast required. </div> -->
-        </div> 
-
-        <div class="col-auto">
-          <label class="left" for="inlineFormInput5">Image:</label>
-          <input type="text" class="form-control mb-2" id="inlineFormInput5"
-            v-model="image" placeholder="image code">
-        </div>
-
-        <div class="col-auto">
-          <label class="left" for="inlineFormInput6">Image HD:</label>
-          <input type="text" class="form-control mb-2" id="inlineFormInput6"
-            v-model="imageHd" placeholder="image HD code">
-        </div>
-
-        <div class="col-auto">
-          <label class="left" for="inlineFormInput4">Trailer:</label>
-          <input type="text" class="form-control mb-2" id="inlineFormInput4"
-            v-model="trailer" placeholder="trailer embeded code">
-        </div>
-
-        <div>
-          <star style= "margin:30px;" v-model="prefer"></star>
-        </div>
-
-        <div class="col-auto">
-          <button style= "margin:30px;" 
-          type="submit" class="btn btn-primary mb-2">Add Film</button>
-        </div>
-
+      <div class="form-group align-left">
+        <label class="left" for="inlineFormInput1">Title:</label>
+        <input type="text" class="form-control mb-2" id="inlineFormInput1" v-model="title" placeholder="title">
+        <div class="testo" v-if="isErrorTitle">Title required.</div>
       </div>
+
+      <div class="form-group align-left">
+        <label class="left" for="inlineFormInput2">Description:</label>
+        <textarea name="message" class="form-control mb-2" id="inlineFormInput2" v-model="description" placeholder="description"></textarea>
+      </div>
+
+      <div class="form-group form-check align-left">
+        <input type="checkbox" class="form-check-input" id="romantic" value="romantic" v-model="checkedCategories">
+        <label for="romantic" class="form-check-label">Romantic</label>
+      </div>
+
+      <div class="form-group form-check align-left">
+        <input type="checkbox" class="form-check-input" id="comic" value="comic" v-model="checkedCategories">
+        <label for="comic" class="form-check-label">Comic</label>
+      </div>
+
+      <div class="form-group form-check align-left">
+        <input type="checkbox" class="form-check-input" id="adventure" value="adventure" v-model="checkedCategories">
+        <label for="adventure" class="form-check-label">Adventure</label>
+      </div>
+
+      <div class="form-group form-check align-left">
+        <input type="checkbox" class="form-check-input" id="top-rated" value="top-rated" v-model="checkedCategories">
+        <label for="top-rated" class="form-check-label">Top-rated</label>
+      </div>
+
+      <div class="form-group align-left">
+        <label class="left" for="inlineFormInput2">Cast:</label>
+        <textarea name="message" class="form-control mb-2" id="inlineFormInput2" v-model="cast" placeholder="cast"></textarea>
+      </div>
+
+      <div class="form-group align-left">
+        <label class="left" for="inlineFormInput5">Image:</label>
+        <input type="text" class="form-control mb-2" id="inlineFormInput5" v-model="image" placeholder="image code">
+      </div>
+
+      <div class="form-group align-left">
+        <label class="left" for="inlineFormInput6">Image HD:</label>
+        <input type="text" class="form-control mb-2" id="inlineFormInput6" v-model="imageHd" placeholder="image HD code">
+      </div>
+
+      <div class="form-group align-left">
+        <label class="left" for="inlineFormInput4">Trailer:</label>
+        <input type="text" class="form-control mb-2" id="inlineFormInput4" v-model="trailer" placeholder="trailer embeded code">
+      </div>
+
+      <div>
+        <star style="margin:30px;" v-model="prefer"></star>
+      </div>
+
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-2">Add Film</button>
+      </div>
+
     </form>
   </div>
 </template>
@@ -82,9 +72,7 @@ export default {
   components: {
     Star
   },
-  props: {
-
-  },
+  props: {},
   data: function() {
     return {
       title: null,
@@ -97,20 +85,18 @@ export default {
       image: null,
       imageHd: null,
       trailer: null,
-      id: Math.random()*10
+      id: Math.random() * 10
     };
   },
 
   methods: {
     checkForm: function(event) {
-
       this.compileHTMLErrors();
 
       var isFormInvalid = false;
       isFormInvalid = this.formHasErrors();
       //se il form ha errori
       if (isFormInvalid) {
-              
         return; //ti fermi qui
       }
 
@@ -146,7 +132,7 @@ export default {
     formHasErrors() {
       var risultato = false;
       // || this.isErrorDescription
-      if (this.isErrorTitle ) {
+      if (this.isErrorTitle) {
         risultato = true;
       }
       return risultato;
@@ -187,6 +173,9 @@ export default {
 .left {
   float: left;
 }
+.align-left {
+  text-align: left;
+}
 .testo {
   color: red;
 }
@@ -199,6 +188,5 @@ export default {
 .rossoContinent {
   margin-bottom: 5px;
 }
-
 </style>
 
