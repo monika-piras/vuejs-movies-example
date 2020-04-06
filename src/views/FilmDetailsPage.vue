@@ -15,7 +15,7 @@
       </div>
       <div class="col">
         <p>CAST:{{filmDetail.cast}}</p>
-        <iframe width="560" height="315" v-bind:src="filmDetail.trailerPath" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" v-bind:src="filmDetail.trailerPath" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         <div>
           <label for="">Preferiti</label>

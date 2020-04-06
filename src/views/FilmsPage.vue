@@ -1,9 +1,10 @@
 <template>
   <div class="about">
     <h1 style="margin-bottom:40px;" v-if="searchValue">Results:</h1>
+    <h1 style="margin-bottom:40px;" v-else-if="searchCategory">Results Film Category: {{searchCategory}}</h1>
     <h1 style="margin-bottom:40px;" v-else>All Films</h1>
 
-    <film-list-all v-bind:search="searchValue" />
+    <film-list-all v-bind:search="searchValue" v-bind:category="searchCategory" />
     <button class="add-button" @click="goToAddFilmPage()">
       <b-icon-plus></b-icon-plus>
     </button>
@@ -18,9 +19,12 @@ export default {
   components: {
     FilmListAll
   },
-  props: {},
+  props: {
+  },
   data() {
-    return {};
+    return {
+      
+    };
   },
   methods: {
     goToAddFilmPage() {
@@ -30,6 +34,9 @@ export default {
   computed: {
     searchValue() {
       return this.$route.params.title;
+    },
+    searchCategory() {
+      return this.$route.params.category;
     }
   }
 };

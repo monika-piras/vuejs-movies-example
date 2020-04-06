@@ -27,6 +27,11 @@ const routes = [
     name: 'film',
     component: FilmsPage
   },
+    {
+    path: '/film/categories/:category',
+    name: 'film',
+    component: FilmsPage
+  },
   {
     path: '/filmDetails/:id',
     name: 'filmDetails',
