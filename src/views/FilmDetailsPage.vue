@@ -53,7 +53,7 @@ export default {
       return this.$route.params.id;
     },
     filmDetail() {
-      return this.$store.getters.getFilmDetails(this.paramID);
+      return this.$store.getters['filmsStore/getFilmDetails'](this.paramID);
     }
   }
 };

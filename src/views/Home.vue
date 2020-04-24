@@ -50,7 +50,6 @@ export default {
     onSlideEnd(slide) {
       this.sliding = false;
     },
-
     directDetails(id) {
       console.log("numero id: " + id);
       this.$router.push("/filmDetails/" + id);
@@ -58,7 +57,7 @@ export default {
   },
   computed: {
     topRatedFilms() {
-      return this.$store.getters.getFilms.filter(item =>
+      return this.$store.getters['filmsStore/getFilms'].filter(item =>
         item.categories.includes("top-rated")
       );
     }

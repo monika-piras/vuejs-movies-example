@@ -158,7 +158,7 @@ export default {
       console.log("save qualcosa ..");
 
       if (this.title) {
-        this.$store.dispatch("callActionAddFilm", film);
+        this.$store.dispatch("filmsStore/callActionAddFilm", film);
         this.$router.push("../film");
       } else {
         console.log("No update Film");

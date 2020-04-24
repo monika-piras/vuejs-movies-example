@@ -24,7 +24,7 @@ export default {
   created: function() {
     // `this` points to the vm instance
     console.log("ON-CREATED APP");
-    this.$store.dispatch("loadFilms");
+    this.$store.dispatch("filmsStore/loadFilms");
   }
 };
 </script>

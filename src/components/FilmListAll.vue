@@ -35,16 +35,16 @@ export default {
     allFilms() {
       console.log(this.search,this.category);
       if (this.search) {
-        return this.$store.getters.getFilms.filter(item =>
+        return this.$store.getters['filmsStore/getFilms'].filter(item =>
           item.title.toLowerCase().includes(this.search.toLowerCase())
         );
       } else if(this.category) {
          console.log('ciao category', this.category);
-          return this.$store.getters.getFilms.filter(item =>
+          return this.$store.getters['filmsStore/getFilms'].filter(item =>
           item.categories.includes(this.category)
         );
       } else {
-        return this.$store.getters.getFilms;
+        return this.$store.getters['filmsStore/getFilms'];
       }
     }
   }

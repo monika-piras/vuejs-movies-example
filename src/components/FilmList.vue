@@ -36,12 +36,13 @@ export default {
   },
   created: function() {
     console.log("ON-CREATED FilmList ");
-    this.filmList = this.$store.getters.getFilms;
+    this.filmList = this.$store.getters['filmsStore/getFilms'];
     this.updateListToDisplay();
 
     this.$store.watch(
       state => {
-        return this.$store.state.allFilms; // could also put a Getter here
+        // return this.$store.state.allFilms; // could also put a Getter here
+        return this.$store.getters['filmsStore/getFilms'];
       },
       (newValue, oldValue) => {
         //something changed do something
