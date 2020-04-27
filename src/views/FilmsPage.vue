@@ -1,10 +1,20 @@
 <template>
   <div class="about">
-    <h1 style="margin-bottom:40px;" v-if="searchValue">Results:</h1>
-    <h1 style="margin-bottom:40px;" v-else-if="searchCategory">Results Film Category: {{searchCategory}}</h1>
-    <h1 style="margin-bottom:40px;" v-else>All Films</h1>
+     <select v-model="selected" @change="onCategorySelection($event)" 
+        style="width:200px;">
+      <option disabled value="">Category Films
+      </option>
+      <option v-for="option in options" v-bind:value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
 
-    <film-list-all v-bind:search="searchValue" v-bind:category="searchCategory" />
+    <h2 style="margin-top:10px;margin-bottom:40px;" v-if="searchValue">RESULTS:</h2>
+    <h2 style="margin-top:10px;margin-bottom:40px;" v-else-if="searchCategory">FILM CATEGORY: {{searchCategory}}</h2>
+    <h2 style="margin-top:10px;margin-bottom:40px;" v-else>ALL FILMS</h2>
+
+    <film-list-all v-bind:search="searchValue" v-bind:category="searchCategory" 
+      style="margin-top:100px;"/>
     <button class="add-button" @click="goToAddFilmPage()">
       <b-icon-plus></b-icon-plus>
     </button>
@@ -19,14 +29,21 @@ export default {
   components: {
     FilmListAll
   },
-  props: {
-  },
+  props: {},
   data() {
     return {
-      
+      selected: "",
+      options: [
+        { text: "Comic", value: "comic" },
+        { text: "Romantic", value: "romantic" },
+        { text: "Adventure", value: "adventure" }
+      ]
     };
   },
   methods: {
+    onCategorySelection(param) {
+      this.$router.push("/film/categories/" + param.target.value);
+    },
     goToAddFilmPage() {
       this.$router.push("/addFilm");
     }
@@ -64,4 +81,16 @@ export default {
   box-shadow: 0 5px #777575;
   transform: translateY(4px);
 }
+select {
+  position: relative;
+  font-family: Arial;
+  background-color: #90959a78;
+  outline:none;
+  padding: 10px;
+  border-radius: 3px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
 </style>

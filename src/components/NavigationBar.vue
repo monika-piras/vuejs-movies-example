@@ -18,29 +18,6 @@
             <b-form-input v-model="title" size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
             <b-button size="sm" class="my-2 my-sm-0" type="submit" v-on:click="search()">Search</b-button>
           </b-nav-form>
-
-          <select v-model="selected" @change="onCategorySelection($event)" style="margin-left:10px;outline:none;">
-            <option disabled value="">Category Films
-            </option>
-            <option v-for="option in options" v-bind:value="option.value">
-              {{ option.text }}
-            </option>
-          </select>
-
-         <b-nav-item-dropdown text="Lang" right>
-            <b-dropdown-item href="#">EN</b-dropdown-item>
-            <b-dropdown-item href="#">ES</b-dropdown-item>
-            <b-dropdown-item href="#">RU</b-dropdown-item>
-            <b-dropdown-item href="#">FA</b-dropdown-item>
-          </b-nav-item-dropdown> 
-
-          <b-nav-item-dropdown right>
-            <template v-slot:button-content>
-              <em>User</em>
-            </template>
-            <b-dropdown-item href="#">Profile</b-dropdown-item>
-            <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-          </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -54,20 +31,11 @@ export default {
   props: {},
   data() {
     return {
-      title: null,
-      selected: "",
-      options: [
-        { text: "Comic", value: "comic" },
-        { text: "Romantic", value: "romantic" },
-        { text: "Adventure", value: "adventure" }
-      ]
+      title: null
     };
   },
 
   methods: {
-    onCategorySelection(param) {
-      this.$router.push("/film/categories/" + param.target.value);
-    },
     search(title) {
       this.$router.push("/film/" + this.title);
     }

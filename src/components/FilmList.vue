@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 v-if="title">{{title}}</h3>
+    <h2 v-if="title" style="margin:20px;">{{title}}</h2>
     <div class="scroll-parent">
       <button class="move-left" @click="less()">
         <b-icon-chevron-left></b-icon-chevron-left>
