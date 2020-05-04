@@ -18,15 +18,14 @@
         <iframe width="100%" height="315" v-bind:src="filmDetail.trailerPath" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         <div>
-          <label for="">Preferiti</label>
+          <label for="">Preferred</label>
           <star v-model="filmDetail.prefer"></star>
-          <p>Preferito: {{filmDetail.prefer}}</p>
+          <!-- <p>Preferito: {{filmDetail.prefer}}</p> -->
         </div>
       </div>
     </div>
   </div>
 </template>
-
 
 <script>
 import Star from "@/components/Star.vue";

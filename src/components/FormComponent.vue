@@ -99,36 +99,30 @@ export default {
       if (isFormInvalid) {
         return; //ti fermi qui
       }
-
       //altrimenti
       this.save();
       this.resetForm();
 
       event.preventDefault();
     },
-
     resetForm() {
       this.title = "";
       // this.description = "";
     },
-
     resetErrors() {
       this.isErrorTitle = false;
       // this.isErrorDescription = false;
     },
-
     compileHTMLErrors() {
       this.resetErrors();
 
       if (!this.title || !this.hasMinLength(this.title, 5)) {
         this.isErrorTitle = true;
       }
-
       // if (!this.description || !this.hasMinLength(this.description, 5)) {
       //   this.isErrorDescription = true;
       // }
     },
-
     formHasErrors() {
       var risultato = false;
       // || this.isErrorDescription
@@ -137,11 +131,9 @@ export default {
       }
       return risultato;
     },
-
     hasMinLength(paramToCompare, length) {
       return paramToCompare.length >= length;
     },
-
     save() {
       const film = {
         title: this.title,
@@ -179,14 +171,6 @@ export default {
 .testo {
   color: red;
 }
-.rossoEmail,
-.rossoName,
-.rossoSurname,
-.rossoContinent {
-  border: 1px solid red;
-}
-.rossoContinent {
-  margin-bottom: 5px;
-}
+
 </style>
 
