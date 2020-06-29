@@ -12,7 +12,7 @@
     <film-list title="Comic Movies" category="comic" />
     <film-list title="Romantic Movies" category="romantic" />
     <film-list title="Adventure Movies" category="adventure" />
-    <film-list title="Preferred Movies" prefer/>
+    <!-- <film-list title="Preferred Movies" prefer/> -->
   </div>
 </template>
 

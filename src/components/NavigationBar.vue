@@ -8,7 +8,9 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item router-link to="/film">Film</b-nav-item>
+          <b-nav-item router-link to="/film">Movie List</b-nav-item>
+          <b-nav-item router-link to="/film">Favourites (stellina)</b-nav-item>
+
           <!-- <b-nav-item router-link to="/filmDetails" disabled>Film Details</b-nav-item> -->
         </b-navbar-nav>
 
