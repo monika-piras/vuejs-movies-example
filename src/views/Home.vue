@@ -1,14 +1,16 @@
 <template>
   <div class="hello">
-    <div>
-      <b-carousel id="carousel-1" v-model="slide" :interval="4000" controls indicators background="#ababab" img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px #333;" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
-        <template v-for="film in this.topRatedFilms">
-          <b-carousel-slide v-bind:img-src="film.imageHd" :key="film.id">
-            <h1 @click="directDetails(film.id)" style="cursor:pointer;">{{film.title}}</h1>
-          </b-carousel-slide>
-        </template>
+
+
+  <b-carousel id="carousel-1" v-model="slide" :interval="4000" controls indicators background="#ababab" img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px #333;" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
+        <b-carousel-slide v-for="film in this.topRatedFilms">
+          <template v-slot:img>
+            <img @click="directDetails(film.id)" style="cursor:pointer;"class="d-block img-fluid-grow w-100" width="1024" height="270" v-bind:src="film.imageHd" :key="film.id" alt="image slot">
+            <!-- <h1 @click="directDetails(film.id)" style="cursor:pointer;">{{film.title}}</h1> -->
+          </template>
+        </b-carousel-slide>
       </b-carousel>
-    </div>
+   
     <film-list title="Comic Movies" category="comic" />
     <film-list title="Romantic Movies" category="romantic" />
     <film-list title="Adventure Movies" category="adventure" />
@@ -71,7 +73,7 @@ li {
 a {
   color: #42b983;
 }
-.carousel-item {
+/* .carousel-item {
   height: 300px;
-}
+} */
 </style>
