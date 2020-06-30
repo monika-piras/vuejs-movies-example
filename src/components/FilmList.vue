@@ -1,7 +1,10 @@
 <template>
   <div>
-    <h4 v-if="title" style="margin:20px;text-align:left">{{title}}</h4>
-    <a href="">Explore</a>
+
+    <h4 v-if="title" style="margin:20px;text-align:left;">{{title}}
+      <a href="" style="margin-left:20px;text-decoration:none;font-size: 1rem;line-height: 1.5;">Explore</a>
+    </h4>
+
     <div class="scroll-parent">
       <button class="move-left" @click="less()">
         <b-icon-chevron-left></b-icon-chevron-left>
@@ -37,13 +40,13 @@ export default {
   },
   created: function() {
     console.log("ON-CREATED FilmList ");
-    this.filmList = this.$store.getters['filmsStore/getFilms'];
+    this.filmList = this.$store.getters["filmsStore/getFilms"];
     this.updateListToDisplay();
 
     this.$store.watch(
       state => {
         // return this.$store.state.allFilms; // could also put a Getter here
-        return this.$store.getters['filmsStore/getFilms'];
+        return this.$store.getters["filmsStore/getFilms"];
       },
       (newValue, oldValue) => {
         //something changed do something
