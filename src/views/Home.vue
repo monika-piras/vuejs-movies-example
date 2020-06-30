@@ -6,7 +6,6 @@
         <b-carousel-slide v-for="film in this.topRatedFilms">
           <template v-slot:img>
             <img @click="directDetails(film.id)" style="cursor:pointer;"class="d-block img-fluid-grow w-100" width="1024" height="270" v-bind:src="film.imageHd" :key="film.id" alt="image slot">
-            <!-- <h1 @click="directDetails(film.id)" style="cursor:pointer;">{{film.title}}</h1> -->
           </template>
         </b-carousel-slide>
       </b-carousel>
