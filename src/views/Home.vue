@@ -10,20 +10,20 @@
         </b-carousel-slide>
       </b-carousel>
    
-    <film-list title="Comic Movies" category="comic" />
-    <film-list title="Romantic Movies" category="romantic" />
-    <film-list title="Adventure Movies" category="adventure" />
+    <category-slider title="Comic Movies" category="comic" />
+    <category-slider title="Romantic Movies" category="romantic" />
+    <category-slider title="Adventure Movies" category="adventure" />
     <!-- <film-list title="Preferred Movies" prefer/> -->
   </div>
 </template>
 
 <script>
-import FilmList from "@/components/FilmList.vue";
+import CategorySlider from "@/components/CategorySlider.vue";
 
 export default {
   name: "Home",
   components: {
-    FilmList
+    CategorySlider
   },
   props: {
     msg: String
@@ -43,7 +43,7 @@ export default {
     },
     directDetails(id) {
       console.log("numero id: " + id);
-      this.$router.push("/filmDetails/" + id);
+      this.$router.push("/movieDetails/" + id);
     }
   },
   computed: {

@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: "FilmList",
+  name: "CategorySlider",
   components: {},
 
   props: {
@@ -81,7 +81,7 @@ export default {
 
     directDetails(id) {
       console.log("numero id: " + id);
-      this.$router.push("/filmDetails/" + id);
+      this.$router.push("/movieDetails/" + id);
     }
   }
 };

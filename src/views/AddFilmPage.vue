@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     goBack() {
-      this.$router.push("/film");
+      this.$router.push("/movie");
     }
   }
 };

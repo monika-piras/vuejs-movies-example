@@ -8,9 +8,9 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item router-link to="/">Home</b-nav-item>
-          <b-nav-item router-link to="/film">Movie List</b-nav-item>
-          <b-nav-item router-link to="/film/favourites">Favourites (stellina)</b-nav-item>
-          <!-- <b-nav-item router-link to="/filmDetails" disabled>Film Details</b-nav-item> -->
+          <b-nav-item router-link to="/movie">Movie List</b-nav-item>
+          <b-nav-item router-link to="/movie/favourites">Favourites (stellina)</b-nav-item>
+          <!-- <b-nav-item router-link to="/movieDetails" disabled>Film Details</b-nav-item> -->
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -40,7 +40,7 @@ export default {
 
   methods: {
     search(title) {
-      this.$router.push("/film/" + this.title);
+      this.$router.push("/movie/" + this.title);
     }
   }
 };

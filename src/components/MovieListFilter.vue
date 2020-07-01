@@ -15,7 +15,7 @@
 <script>
 import Star from "@/components/Star.vue";
 export default {
-  name: "FilmListAll",
+  name: "MovieListFilter",
   components: {
     Star
   },
@@ -27,7 +27,7 @@ export default {
   methods: {
     directDetails(id) {
       console.log("numero id: " + id);
-      this.$router.push("/filmDetails/" + id);
+      this.$router.push("/movieDetails/" + id);
     }
   },
 

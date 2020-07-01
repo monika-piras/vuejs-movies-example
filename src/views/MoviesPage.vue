@@ -13,7 +13,7 @@
     <h2 style="margin-top:10px;margin-bottom:40px;" v-else-if="searchCategory">FILM CATEGORY: {{searchCategory}}</h2>
     <h2 style="margin-top:10px;margin-bottom:40px;" v-else>ALL FILMS</h2>
 
-    <film-list-all v-bind:search="searchValue" v-bind:category="searchCategory" 
+    <movie-list-filter v-bind:search="searchValue" v-bind:category="searchCategory" 
       style="margin-top:100px;"/>
     <button class="add-button" @click="goToAddFilmPage()">
       <b-icon-plus></b-icon-plus>
@@ -22,12 +22,12 @@
 </template>
 
 <script>
-import FilmListAll from "@/components/FilmListAll.vue";
+import MovieListFilter from "@/components/MovieListFilter.vue";
 
 export default {
-  name: "FilmsPage",
+  name: "MoviesPage",
   components: {
-    FilmListAll
+    MovieListFilter
   },
   props: {},
   data() {
@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     onCategorySelection(param) {
-      this.$router.push("/film/categories/" + param.target.value);
+      this.$router.push("/movie/categories/" + param.target.value);
     },
     goToAddFilmPage() {
       this.$router.push("/addFilm");
