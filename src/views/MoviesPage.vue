@@ -1,20 +1,12 @@
 <template>
   <div class="about">
-     <select v-model="selected" @change="onCategorySelection($event)" 
-        style="width:200px;">
-      <option disabled value="">Category Films
-      </option>
-      <option v-for="option in options" v-bind:value="option.value">
-        {{ option.text }}
-      </option>
-    </select>
 
     <h2 style="margin-top:10px;margin-bottom:40px;" v-if="searchValue">RESULTS:</h2>
     <h2 style="margin-top:10px;margin-bottom:40px;" v-else-if="searchCategory">FILM CATEGORY: {{searchCategory}}</h2>
+    <h2 style="margin-top:10px;margin-bottom:40px;" v-else-if="isFavourites">Favourite movies: {{searchCategory}}</h2>
     <h2 style="margin-top:10px;margin-bottom:40px;" v-else>ALL FILMS</h2>
 
-    <movie-list-filter v-bind:search="searchValue" v-bind:category="searchCategory" 
-      style="margin-top:100px;"/>
+    <movie-list-serp v-bind:mySearch="searchValue" v-bind:isPrefer="isFavourites" v-bind:myCategory="searchCategory" style="margin-top:100px;" />
     <button class="add-button" @click="goToAddFilmPage()">
       <b-icon-plus></b-icon-plus>
     </button>
@@ -22,28 +14,18 @@
 </template>
 
 <script>
-import MovieListFilter from "@/components/MovieListFilter.vue";
+import MovieListSerp from "@/components/MovieListSerp.vue";
 
 export default {
   name: "MoviesPage",
   components: {
-    MovieListFilter
+    MovieListSerp
   },
-  props: {},
+  props: ["isFavourites"],
   data() {
-    return {
-      selected: "",
-      options: [
-        { text: "Comic", value: "comic" },
-        { text: "Romantic", value: "romantic" },
-        { text: "Adventure", value: "adventure" }
-      ]
-    };
+    return {};
   },
   methods: {
-    onCategorySelection(param) {
-      this.$router.push("/movie/categories/" + param.target.value);
-    },
     goToAddFilmPage() {
       this.$router.push("/addFilm");
     }
@@ -81,16 +63,4 @@ export default {
   box-shadow: 0 5px #777575;
   transform: translateY(4px);
 }
-select {
-  position: relative;
-  font-family: Arial;
-  background-color: #90959a78;
-  outline:none;
-  padding: 10px;
-  border-radius: 3px;
-  float: right;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-
 </style>

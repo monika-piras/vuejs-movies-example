@@ -6,7 +6,7 @@
             "categories": ["romantic", "comic", "top-rated"],
             "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 1,
-            "prefer": false,
+            "prefer": true,
             "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
             "imageHd":"/img/mecontrote.jpg",
             "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIX0zX-QOI-gaC473n51sbXIqobgEGnbL86fCk0JmHkXThrPRX"

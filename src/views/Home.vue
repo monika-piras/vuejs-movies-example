@@ -45,6 +45,7 @@ export default {
       console.log("numero id: " + id);
       this.$router.push("/movieDetails/" + id);
     }
+    
   },
   computed: {
     topRatedFilms() {

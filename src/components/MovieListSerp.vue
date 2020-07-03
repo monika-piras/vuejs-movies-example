@@ -15,11 +15,11 @@
 <script>
 import Star from "@/components/Star.vue";
 export default {
-  name: "MovieListFilter",
+  name: "MovieListSerp",
   components: {
     Star
   },
-  props: ["search","category"],
+  props: ["mySearch", "myCategory", "isPrefer"],
 
   data() {
     return {};
@@ -33,18 +33,20 @@ export default {
 
   computed: {
     allFilms() {
-      console.log(this.search,this.category);
-      if (this.search) {
-        return this.$store.getters['filmsStore/getFilms'].filter(item =>
-          item.title.toLowerCase().includes(this.search.toLowerCase())
+      if (this.mySearch) {
+        return this.$store.getters["filmsStore/getFilms"].filter(item =>
+          item.title.toLowerCase().includes(this.mySearch.toLowerCase())
         );
-      } else if(this.category) {
-         console.log('ciao category', this.category);
-          return this.$store.getters['filmsStore/getFilms'].filter(item =>
-          item.categories.includes(this.category)
+      } else if (this.myCategory) {
+        return this.$store.getters["filmsStore/getFilms"].filter(item =>
+          item.categories.includes(this.myCategory)
+        );
+      } else if (this.isPrefer) {
+        return this.$store.getters["filmsStore/getFilms"].filter(
+          item => item.prefer == true
         );
       } else {
-        return this.$store.getters['filmsStore/getFilms'];
+        return this.$store.getters["filmsStore/getFilms"];
       }
     }
   }

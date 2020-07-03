@@ -1,8 +1,10 @@
 <template>
   <div>
-
+    <!-- {{this.category}} -->
     <h4 v-if="title" style="margin:20px;text-align:left;">{{title}}
-      <a href="" style="margin-left:20px;text-decoration:none;font-size: 1rem;line-height: 1.5;">Explore</a>
+      <router-link :to ="{ path: '/movie/categories/'+ this.category}" 
+       style="margin-left:20px;text-decoration:none;font-size:1rem;line-height:1.5;">
+       Explore</router-link>
     </h4>
 
     <div class="scroll-parent">
@@ -29,8 +31,7 @@ export default {
 
   props: {
     title: String,
-    category: String,
-    prefer: Boolean
+    category: String
   },
   data() {
     return {
@@ -72,11 +73,7 @@ export default {
         this.filmsToDisplay = this.filmList.filter(item =>
           item.categories.includes(this.category)
         );
-      } else {
-        this.filmsToDisplay = this.filmList.filter(
-          item => item.prefer === true
-        );
-      }
+      } 
     },
 
     directDetails(id) {

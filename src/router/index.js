@@ -16,21 +16,23 @@ const routes = [
   {
     path: '/movie',
     name: 'Movie',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: MoviesPage
-    //() => import(/* webpackChunkName: "about" */ '../views/Film.vue')
   },
   {
     path: '/movie/:title',
-    name: 'Movie',
+    name: 'MovieTitle',
     component: MoviesPage
   },
-    {
-    path: '/movie/categories/:category',
-    name: 'Movie',
+  {
+    path: '/categories/:category',
+    name: 'MovieCategory',
     component: MoviesPage
+  },
+  {
+    path: '/favourites',
+    name: 'MovieFavourites',
+    component: MoviesPage,
+    props: { isFavourites: true }
   },
   {
     path: '/movieDetails/:id',
@@ -42,12 +44,12 @@ const routes = [
     name: 'addFilm',
     component: AddFilmPage
   }
-
 ]
 
 const router = new VueRouter({
   linkExactActiveClass: "active",
-  routes
+  routes,
+  mode: 'history'
 })
 
 export default router
