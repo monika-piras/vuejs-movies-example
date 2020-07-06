@@ -1,8 +1,8 @@
 <template>
   <div>
-    <!-- {{this.category}} -->
+     <!-- {{this.category}}  -->
     <h4 v-if="title" style="margin:20px;text-align:left;">{{title}}
-      <router-link :to ="{ path: '/movie/categories/'+ this.category}" 
+      <router-link :to ="{ path: '/categories/'+ this.category}" 
        style="margin-left:20px;text-decoration:none;font-size:1rem;line-height:1.5;">
        Explore</router-link>
     </h4>
@@ -107,7 +107,7 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  border: 1px solid gray;
+  border-top: solid gray;
   opacity: 1;
   background-color: rgb(251, 251, 251);
   z-index: 2;

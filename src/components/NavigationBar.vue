@@ -15,11 +15,10 @@
           <template v-slot:button-content>
             <em>Categories</em>
           </template>
-          <b-dropdown-item v-for="option in options" router-link v-bind:to="option.value" >  {{ option.text }}</b-dropdown-item>
+          <b-dropdown-item v-for="option in options" router-link v-bind:to="option.value">{{ option.text }}</b-dropdown-item>
         </b-nav-item-dropdown>
 
-          <!-- <b-nav-item router-link to="/movie/favourites">Favourites (stellina)</b-nav-item> -->
-          <!-- <b-nav-item router-link to="/movieDetails" disabled>Film Details</b-nav-item> -->
+          <!-- <b-nav-item router-link to="/movieDetailsPage" disabled>Film Details</b-nav-item> -->
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -77,5 +76,11 @@ export default {
     background: #343a40;
     color: #fff;
     border: 0;
+}
+/deep/ .dropdown-item {
+  color: #fff;
+}
+/deep/ .dropdown-item:hover{
+  color: #212529;;
 }
 </style>

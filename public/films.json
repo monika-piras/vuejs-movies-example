@@ -6,32 +6,32 @@
             "categories": ["romantic", "comic", "top-rated"],
             "cast": " Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
             "id" : 1,
-            "prefer": true,
-            "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
+            "prefer": false,
+            "trailerPath":"",
             "imageHd":"/img/mecontrote.jpg",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIX0zX-QOI-gaC473n51sbXIqobgEGnbL86fCk0JmHkXThrPRX"
+            "image":"/img/mecontrote2.jpg"
         },
         {
             "title": "Joker",
             "description": "E'un film calloni(2/3) del 2016 diretto da Gennaro Nunziante e interpretato da Checco Zalone. Quarto film con protagonista Zalone dopo Cado dalle nubi, Che ...",
-            "categories": ["comic", "top-rated"],
+            "categories": ["adventure", "top-rated"],
             "cast": " Checco Zalone, Eleonora Giovanardi, Sonia Bergamasco, Maurizio Micheli, Ludovica Modugno",
             "id" : 2,
             "prefer": false,
-            "trailerPath":"https://www.youtube.com/embed/t3al1PBx09A",
+            "trailerPath":"",
             "imageHd":"/img/joker.jpg",
-            "image": "https://pad.mymovies.it/filmclub/2015/11/022/locandina.jpg"
+            "image": "/img/joker2.jpg"
         },
         {
             "title": "Frozen",
             "description": "One Night with the King è un film del 2006 diretto da Michael O. Sajbel. È un film drammatico statunitense, interpretato da Tiffany Dupont, ...",
-            "categories": ["romantic", "top-rated"],
+            "categories": ["adventure", "top-rated"],
             "cast": "  Tiffany Dupont, Luke Goss e John Noble",
             "id" : 3,
             "prefer": false,
-            "trailerPath":"https://www.youtube.com/embed/HgRR322ezUE",
+            "trailerPath":"",
             "imageHd":"/img/frozen.jpg",
-            "image": "https://resources5.eaglepictures.com/image/1/400/600/5bd1db5d0ed52/one-night-with-the-king-una-notte-con-il-re-cover.jpg"
+            "image": "/img/frozen2.jpg"
         },
         {
             "title": "This is Us",
@@ -40,9 +40,9 @@
             "cast": " Harrison Ford, Karen Allen, John Rhys-Davies, Alfred Molina",
             "id" : 4,
             "prefer": false,
-            "trailerPath":"https://www.youtube.com/embed/eEvEK4kJcr0",
+            "trailerPath":"",
             "imageHd":"/img/thisus.jpg",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTphCa50-9QAmsVxZ13pUyKbCIHoS610tu3Hf7Dr1a-J4pfKkKJ"
+            "image": "/img/thisisus2.jpg"
         },
         {
             "title": "Indiana Jones e il tempio maledetto",
@@ -50,10 +50,10 @@
             "categories": ["adventure"],
             "cast": " Harrison Ford, Kate Capshaw, Ke Huy Quan, Pat Roach",
             "id" : 5,
-            "prefer": false,
+            "prefer": true,
             "trailerPath":"https://www.youtube.com/embed/WqnEk15YBOw",
             "imageHd":"",
-            "image": "https://pad.mymovies.it/filmclub/2006/08/064/locandina.jpg"
+            "image": "/img/indianailtempio.jpg"
         },
         {
             "title": "Una notte da leoni",
@@ -64,7 +64,7 @@
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/rp5T9sSkybY",
             "imageHd":"",
-            "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
+            "image": "/img/nottedaleoni1.jpg"
         },
         {
             "title": "Dirty Dancing",
@@ -75,7 +75,7 @@
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/wcra0-0Gu4U",
             "imageHd":"",
-            "image": "https://pad.mymovies.it/filmclub/2006/08/185/imm.jpg"
+            "image": "/img/dirtydancing.jpg"
         },
         {
             "title": "Una notte da leoni 2",
@@ -86,7 +86,7 @@
             "prefer": false,
             "trailerPath": "https://www.youtube.com/embed/Cm9Muy3wbfY",
             "imageHd":"",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQj5uEU8TKRZlVkxp3IL2_kWldR3AiCZv-2N_I8NbsqJEUT0bhX"
+            "image": "/img/nottedaleoni2.jpg"
         },
         {
             "title": "Una notte da leoni 3",
@@ -97,51 +97,51 @@
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/E3w6X455IiM",
             "imageHd":"",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ9lw5B4zduVJVai3NbXk7654WDLhYvvzmeFdE4RidCf-KUMVUg"
+            "image": "/img/nottedaleoni3.jpg"
         },
         {
-            "title": "Una notte da leoni",
+            "title": "Titanic",
             "description": "(The Hangover) è un film del 2009 diretto da Todd Phillips, con Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha e Heather ...",
-            "categories": ["comic", "adventure"],
+            "categories": ["romantic", "adventure"],
             "cast": " Todd Phillips con Bradley Cooper, Heather Graham, Zach Galifianakis, Ed Helms",
             "id" : 10,
             "prefer": false,
-            "trailerPath":"https://www.youtube.com/embed/rp5T9sSkybY",
+            "trailerPath":"",
             "imageHd":"",
-            "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
+            "image": "/img/titanic.jpg"
         },
         {
-            "title": "Una notte da leoni",
+            "title": "Quo Vado",
             "description": "(The Hangover) è un film del 2009 diretto da Todd Phillips, con Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha e Heather ...",
             "categories": ["comic", "adventure"],
             "cast": " Todd Phillips con Bradley Cooper, Heather Graham, Zach Galifianakis, Ed Helms",
             "id" : 11,
             "prefer": false,
-            "trailerPath":"https://www.youtube.com/embed/2e-eXJ6HgkQ",
+            "trailerPath":"",
             "imageHd":"",
-            "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
+            "image": "/img/quovado.jpg"
         },
         {
-            "title": "Una notte da leoni",
+            "title": "One Night with the King",
             "description": "(The Hangover) è un film del 2009 diretto da Todd Phillips, con Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha e Heather ...",
-            "categories": ["comic", "adventure"],
+            "categories": ["romantic"],
             "cast": " Todd Phillips con Bradley Cooper, Heather Graham, Zach Galifianakis, Ed Helms",
             "id" : 12,
             "prefer": false,
-            "trailerPath":"https://www.youtube.com/embed/rp5T9sSkybY",
+            "trailerPath":"",
             "imageHd":"",
-            "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
+            "image": "/img/onenight.jpg"
         },
         {
-            "title": "Una notte da leoni",
+            "title": "the Best of Me",
             "description": "(The Hangover) è un film del 2009 diretto da Todd Phillips, con Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha e Heather ...",
-            "categories": ["comic", "adventure"],
+            "categories": ["romantic"],
             "cast": " Todd Phillips con Bradley Cooper, Heather Graham, Zach Galifianakis, Ed Helms",
             "id" : 13,
             "prefer": false,
-            "trailerPath":"https://www.youtube.com/embed/rp5T9sSkybY",
+            "trailerPath":"",
             "imageHd":"",
-            "image": "https://pad.mymovies.it/filmclub/2009/03/053/locandina.jpg"
+            "image": "/img/thebestofme.jpg"
         }
         
     ]

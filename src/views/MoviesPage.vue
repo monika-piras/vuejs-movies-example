@@ -1,9 +1,9 @@
 <template>
   <div class="about">
 
-    <h2 style="margin-top:10px;margin-bottom:40px;" v-if="searchValue">RESULTS:</h2>
+    <h2 style="margin-top:10px;margin-bottom:40px;" v-if="searchValue">RESULTS for "{{searchValue}}":</h2>
     <h2 style="margin-top:10px;margin-bottom:40px;" v-else-if="searchCategory">FILM CATEGORY: {{searchCategory}}</h2>
-    <h2 style="margin-top:10px;margin-bottom:40px;" v-else-if="isFavourites">Favourite movies: {{searchCategory}}</h2>
+    <h2 style="margin-top:10px;margin-bottom:40px;" v-else-if="isFavourites">FAVOURITES MOVIES: {{searchCategory}}</h2>
     <h2 style="margin-top:10px;margin-bottom:40px;" v-else>ALL FILMS</h2>
 
     <movie-list-serp v-bind:mySearch="searchValue" v-bind:isPrefer="isFavourites" v-bind:myCategory="searchCategory" style="margin-top:100px;" />
