@@ -1,11 +1,10 @@
 <template>
   <div class="hello">
 
-
   <b-carousel id="carousel-1" v-model="slide" :interval="4000" controls indicators background="#ababab" img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px #333;" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
         <b-carousel-slide v-for="film in this.topRatedFilms">
           <template v-slot:img>
-            <img @click="directDetails(film.id)" style="cursor:pointer;"class="d-block img-fluid-grow w-100" width="1024" height="270" v-bind:src="film.imageHd" :key="film.id" alt="image slot">
+            <img @click="directDetails(film.id)" style="cursor:pointer;"class="d-block img-fluid-grow w-100 img-responsive" v-bind:src="film.imageHd" :key="film.id" alt="image slot">
           </template>
         </b-carousel-slide>
       </b-carousel>
@@ -70,10 +69,8 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #42b983;
+.img-responsive {
+  max-width:100%;
+  min-height:115px;
 }
-/* .carousel-item {
-  height: 300px;
-} */
 </style>

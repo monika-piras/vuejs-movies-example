@@ -30,14 +30,19 @@ export default {
 </script>
  
 <style lang="scss">
+html,
+body {
+  height: 100%;
+  background-color: #1a1a1a;
+
+}
 #app {
+  // height: 100%;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
-  font-family: 'Orbitron', sans-serif;
-  
+  font-family: "Orbitron", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  background-color:  #1a1a1a;
 }
 </style>

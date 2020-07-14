@@ -2,7 +2,6 @@
   <div>
     <ul class="scrollable">
       <li v-for="elementoCorrente in this.allFilms">
-        <!-- titolo: {{elementoCorrente.title}} -->
         <div class="image">
           <star class="star" v-bind:class="{ 'isPreferred':elementoCorrente.prefer }" v-model="elementoCorrente.prefer" />
           <img v-bind:src="elementoCorrente.image" alt="Image Film" @click="directDetails(elementoCorrente.id)" />

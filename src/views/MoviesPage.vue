@@ -1,10 +1,10 @@
 <template>
-  <div class="about">
+  <div class="movies-page">
 
-    <h2 style="margin-top:10px;margin-bottom:40px;" v-if="searchValue">RESULTS for "{{searchValue}}":</h2>
-    <h2 style="margin-top:10px;margin-bottom:40px;" v-else-if="searchCategory">FILM CATEGORY: {{searchCategory}}</h2>
-    <h2 style="margin-top:10px;margin-bottom:40px;" v-else-if="isFavourites">FAVOURITES MOVIES: {{searchCategory}}</h2>
-    <h2 style="margin-top:10px;margin-bottom:40px;" v-else>ALL FILMS</h2>
+    <h2 v-if="searchValue">RESULTS for "{{searchValue}}":</h2>
+    <h2 v-else-if="searchCategory">FILM CATEGORY: {{searchCategory}}</h2>
+    <h2 v-else-if="isFavourites">FAVOURITES MOVIES: {{searchCategory}}</h2>
+    <h2 v-else>ALL FILMS</h2>
 
     <movie-list-serp v-bind:mySearch="searchValue" v-bind:isPrefer="isFavourites" v-bind:myCategory="searchCategory" style="margin-top:100px;" />
     <button class="add-button" @click="goToAddFilmPage()">
@@ -41,6 +41,14 @@ export default {
 };
 </script>
 <style scoped >
+/* @media only screen and (max-width: 576px) {
+        .movies-page {
+        }
+            } */
+h2 {
+  margin-top:30px;
+  margin-bottom:40px;
+}
 .add-button {
   font-size: 25px;
   color: #1b1a1a;
@@ -62,5 +70,8 @@ export default {
   background-color: #808280;
   box-shadow: 0 5px #777575;
   transform: translateY(4px);
+}
+.movies-page{
+  height: 100%;
 }
 </style>

@@ -13,7 +13,8 @@
       </button>
       <ul class="scrollable">
         <li v-for="film in this.filmsToDisplay" class="relative">
-          <i v-if="film.prefer" class="material-icons star">star</i>
+          <star class="star" v-bind:class="{ 'isPreferred':film.prefer }" v-model="film.prefer" />
+          <!-- <i v-if="film.prefer" class="material-icons star">star</i> -->
           <img v-bind:src="film.image" @click="directDetails(film.id)" alt="Image Film" />
         </li>
       </ul>
@@ -25,9 +26,12 @@
 </template>
 
 <script>
+import Star from "@/components/Star.vue";
 export default {
   name: "CategorySlider",
-  components: {},
+  components: {
+    Star
+  },
 
   props: {
     title: String,
@@ -84,17 +88,23 @@ export default {
 };
 </script>
 <style scoped>
+
+.scroll-parent {
+  position: relative;
+}
+
 .scroll-parent ul {
   display: flex;
   overflow: hidden;
   scroll-behavior: smooth;
   list-style: none;
 }
+
 .scroll-parent li {
   margin: 0 0.3rem;
 }
+
 .scroll-parent li:hover {
-  /* background: rgba(179, 179, 204, 0.5); */
   cursor: pointer;
   position: relative;
 }
@@ -102,24 +112,34 @@ export default {
 .relative {
   position: relative;
 }
+
+.scroll-parent li:hover .star{
+  opacity:1;
+}
+
 .star {
-  color: #e0e03e;
   position: absolute;
-  top: 0;
-  right: 0;
-  border-top: solid gray;
-  opacity: 1;
-  background-color: rgb(251, 251, 251);
+  top: 10px;
+  right: 15px;
+  opacity: 0;
+  background-color: rgba(148, 148, 184, 0.8);
   z-index: 2;
 }
+
+.isPreferred {
+  opacity: 1 !important;
+}
+
 .scroll-parent li > img {
   margin: 0;
   height: 300px;
   width: 200px;
 }
+
 .scroll-parent:first-child {
   margin-left: 50px;
 }
+
 .move-right {
   position: absolute;
   height: 100%;
@@ -128,7 +148,9 @@ export default {
   right: 0;
   border: none;
   background-color: #e1e1ea7a;
+  z-index: 2;
 }
+
 .move-left {
   position: absolute;
   height: 100%;
@@ -137,14 +159,12 @@ export default {
   left: 0;
   border: none;
   background-color: #e1e1ea7a;
+  z-index: 2;
 }
 .scrollItem {
   overflow: hidden;
 }
 
-.scroll-parent {
-  position: relative;
-}
 button {
   outline: none !important;
 }

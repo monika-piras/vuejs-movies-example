@@ -1,29 +1,54 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col-auto left">
-        <b-button style="margin-top:30px; margin-bottom:30px;" v-on:click="goBack()">
-          <b-icon-chevron-left></b-icon-chevron-left>Back</b-button>
-      </div>
-    </div>
+    <div v-if="filmDetail" class="dark movie-details bg" :style="{ backgroundImage: 'url(' + filmDetail.image + ')'}">
+      <div class="row">
 
-    <div class="row" v-if="filmDetail">
-      <div class="col">
-        <h4>{{filmDetail.title}}</h4>
-        <img class="immagine" v-bind:src="filmDetail.image" alt="Image Film" />
-        <p>{{filmDetail.description}}</p>
-      </div>
-      <div class="col">
-        <p>CAST:{{filmDetail.cast}}</p>
-        <iframe width="100%" height="315" v-bind:src="filmDetail.trailerPath" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <div class="col" style="text-align:left;">
+          <h1>{{filmDetail.title}}</h1>
+          <p>{{filmDetail.durata}} {{filmDetail.year}}</p>
+          <p id="description">{{filmDetail.description}}</p>
+          <div class="row cast">
+            <div class="col-2">CAST:</div>
+            <div class="col-10">{{filmDetail.cast}}</div>
 
-        <div>
-          <label for="">Preferred</label>
-          <star v-model="filmDetail.prefer"></star>
-          <!-- <p>Preferito: {{filmDetail.prefer}}</p> -->
+            <div class="col-2 category">CATEGORY:</div>
+            <div class="col-10">
+              <a href="" v-for="(item, index) in filmDetail.categories" :key="item" class="capitalize categories">
+                {{item}}
+                <span v-if="index+1 < filmDetail.categories.length">, </span>
+              </a>
+            </div>
+
+            <div class="col-2">LANGUAGE:</div>
+            <div class="col-10">
+              <span style="margin-left:50px;"></span>{{filmDetail.language}}</div>
+          </div>
         </div>
+
+        <div class="col">
+          <div> 
+            <img v-bind:src="filmDetail.image" width="200" height="" class="mediaImg">
+          </div>
+          <div class="buttonTrailer">
+            <b-button btn btn-primary v-b-modal.modal-1>TRAILER</b-button>
+            <b-modal id="modal-1">
+              <iframe width="100%" height="315" v-bind:src="filmDetail.trailerPath" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </b-modal>
+          </div>
+          <div class="buttonPreferiti">
+            <button class="btn btn-primary">AGGIUNGI A PREFERITI
+              <star v-model="filmDetail.prefer"></star>
+            </button>
+          </div>
+        </div>
+
       </div>
+
     </div>
+
+  </div>
+
   </div>
 </template>
 
@@ -52,17 +77,75 @@ export default {
       return this.$route.params.id;
     },
     filmDetail() {
-      return this.$store.getters['filmsStore/getFilmDetails'](this.paramID);
+      return this.$store.getters["filmsStore/getFilmDetails"](this.paramID);
     }
   }
 };
 </script>
 <style scoped>
-.immagine {
-  margin-bottom: 30px;
+    
+.categories {
+  text-decoration: none;
+  color: #79b8f3;
+  font-weight: bold;
 }
-img {
-  max-width: 300px;
-  height: auto;
+a:first-child {
+  margin-left: 50px;
+}
+
+#description {
+  margin-top: 30px;
+}
+/* @media only screen and (max-width: 576px) {
+        #description{
+          font-size: .8rem;
+        }
+    } */
+.cast {
+  margin-top: 30px;
+}
+@media only screen and (max-width: 576px) {
+        .col-10 {
+          margin-left: 0.05rem;
+        }
+        .mediaImg {
+          margin-top: 20px;
+        }
+    }
+.col-2,
+.col-10 {
+  margin-top: 20px;
+}
+.dark:before {
+  background: linear-gradient(
+    to right bottom,
+    rgba(26, 26, 26, 0.8),
+    rgba(89, 89, 89, 0.8)
+  );
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.buttonTrailer, .buttonPreferiti {
+  margin-top: 30px;
+}
+
+.movie-details {
+  padding: 3rem 2rem;
+}
+
+.bg {
+  background-size: cover;
+  height:100%;
+  background-position: top;
+  position: relative;
+  z-index: 0;
+}
+.capitalize {
+  text-transform: capitalize;
 }
 </style>
