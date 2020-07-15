@@ -1,14 +1,13 @@
 <template>
   <div>
-     <!-- {{this.category}}  -->
+    <!-- {{this.category}}  -->
     <h4 v-if="title" style="margin:20px;text-align:left;">{{title}}
-      <router-link :to ="{ path: '/categories/'+ this.category}" 
-       style="margin-left:20px;text-decoration:none;font-size:1rem;line-height:1.5;">
-       Explore</router-link>
+      <router-link :to="{ path: '/categories/'+ this.category}" style="margin-left:20px;text-decoration:none;font-size:1rem;line-height:1.5;">
+        Explore</router-link>
     </h4>
 
     <div class="scroll-parent">
-      <button class="move-left" @click="less()">
+      <button class="move-left" @click="less()" v-bind:class="{showButton: isButtonLeftActive}">
         <b-icon-chevron-left></b-icon-chevron-left>
       </button>
       <ul class="scrollable">
@@ -39,6 +38,7 @@ export default {
   },
   data() {
     return {
+      isButtonLeftActive: false,
       filmList: [],
       filmsToDisplay: []
     };
@@ -68,6 +68,9 @@ export default {
   methods: {
     more() {
       this.$el.querySelector(".scrollable").scrollLeft += +300;
+      if (this.$el.querySelector(".scrollable").scrollLeft != 0) {
+        this.isButtonLeftActive = true;
+      }
     },
     less() {
       this.$el.querySelector(".scrollable").scrollLeft += -300;
@@ -77,7 +80,7 @@ export default {
         this.filmsToDisplay = this.filmList.filter(item =>
           item.categories.includes(this.category)
         );
-      } 
+      }
     },
 
     directDetails(id) {
@@ -88,7 +91,6 @@ export default {
 };
 </script>
 <style scoped>
-
 .scroll-parent {
   position: relative;
 }
@@ -113,8 +115,8 @@ export default {
   position: relative;
 }
 
-.scroll-parent li:hover .star{
-  opacity:1;
+.scroll-parent li:hover .star {
+  opacity: 1;
 }
 
 .star {
@@ -152,6 +154,7 @@ export default {
 }
 
 .move-left {
+  visibility: hidden;
   position: absolute;
   height: 100%;
   width: 50px;
@@ -161,6 +164,11 @@ export default {
   background-color: #e1e1ea7a;
   z-index: 2;
 }
+
+.showButton {
+  visibility: visible;
+}
+
 .scrollItem {
   overflow: hidden;
 }

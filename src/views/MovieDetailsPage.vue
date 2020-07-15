@@ -2,9 +2,8 @@
   <div class="container">
     <div v-if="filmDetail" class="dark movie-details bg" :style="{ backgroundImage: 'url(' + filmDetail.image + ')'}">
       <div class="row">
-
         
-        <div class="col" style="text-align:left;">
+        <div class="col" style="text-align:justify;">
           <h1>{{filmDetail.title}}</h1>
           <p>{{filmDetail.durata}} {{filmDetail.year}}</p>
           <p id="description">{{filmDetail.description}}</p>
