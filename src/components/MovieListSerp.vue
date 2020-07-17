@@ -1,13 +1,14 @@
 <template>
   <div>
-    <ul class="scrollable">
+    <ul class="scrollable" v-if="this.allFilms.length > 0">
       <li v-for="elementoCorrente in this.allFilms">
         <div class="image">
-          <star class="star" v-bind:class="{ 'isPreferred':elementoCorrente.prefer }" v-model="elementoCorrente.prefer" />
-          <img v-bind:src="elementoCorrente.image" alt="Image Film" @click="directDetails(elementoCorrente.id)" />
+          <star class="star" v-bind:class="{'isPreferred':elementoCorrente.prefer}"v-model="elementoCorrente.prefer"/>
+          <img v-bind:src="elementoCorrente.image" alt="Image Film" @click="directDetails(elementoCorrente.id)"/>
         </div>
       </li>
     </ul>
+    <h1 class="no-item-found" v-else>No Item Found😢</h1>
   </div>
 </template>
 
@@ -68,9 +69,10 @@ img {
   position: relative;
   z-index: 1;
 }
-
+.no-item-found {
+  margin: 12rem 0;
+}
 .image:hover {
-  /* background: rgba(179, 179, 204, 0.5); */
   cursor: pointer;
 }
 

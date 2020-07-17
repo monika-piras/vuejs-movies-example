@@ -8,10 +8,11 @@
           </template>
         </b-carousel-slide>
       </b-carousel>
-   
+
+    <category-slider title="Adventure Movies" category="adventure" />
     <category-slider title="Comic Movies" category="comic" />
     <category-slider title="Romantic Movies" category="romantic" />
-    <category-slider title="Adventure Movies" category="adventure" />
+    
     <!-- <film-list title="Preferred Movies" prefer/> -->
   </div>
 </template>
