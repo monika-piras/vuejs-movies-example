@@ -8,7 +8,7 @@
         </div>
       </li>
     </ul>
-    <h1 class="no-item-found" v-else>No Item Found😢</h1>
+    <h4 class="no-item-found" v-else>No Item Found😢</h4>
   </div>
 </template>
 
@@ -70,7 +70,7 @@ img {
   z-index: 1;
 }
 .no-item-found {
-  margin: 12rem 0;
+  margin: 14rem 0;
 }
 .image:hover {
   cursor: pointer;

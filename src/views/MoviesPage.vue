@@ -41,10 +41,6 @@ export default {
 };
 </script>
 <style scoped >
-/* @media only screen and (max-width: 576px) {
-        .movies-page {
-        }
-            } */
 h2 {
   margin-top:30px;
   margin-bottom:40px;

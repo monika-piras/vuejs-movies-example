@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- {{this.category}}  -->
-    <h4 v-if="title" style="margin:20px;text-align:left;">{{title}}
+    <h4 class="font-sizeh4-mobile style-h4" v-if="title">{{title}}
       <router-link :to="{ path: '/categories/'+ this.category}" style="margin-left:20px;text-decoration:none;font-size:1rem;line-height:1.5;">
         Explore</router-link>
     </h4>
@@ -91,6 +91,21 @@ export default {
 };
 </script>
 <style scoped>
+@media only screen and (max-width: 576px) {
+  .font-sizeh4-mobile {
+    font-size: 1.2rem;
+    margin: 20px 10px !important;
+  }
+ .scroll-parent li > img {
+  height: 260px !important;
+  width: 160px !important;
+}
+
+}
+.style-h4 {
+  margin: 20px;
+  text-align: left;
+}
 .scroll-parent {
   position: relative;
 }

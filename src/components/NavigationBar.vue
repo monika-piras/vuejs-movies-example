@@ -72,7 +72,7 @@ export default {
   border-bottom: 3px solid red;
 }
 /deep/ .dropdown-menu  {
-     border-radius: 0;
+    border-radius: 0;
     background: #343a40;
     color: #fff;
     border: 0;

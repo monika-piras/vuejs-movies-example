@@ -3,7 +3,7 @@
     <div v-if="filmDetail" class="dark movie-details bg" :style="{ backgroundImage: 'url(' + filmDetail.image + ')'}">
       <div class="row">
         
-        <div class="col" style="text-align:justify;">
+        <div class="col style-col">
           <h1>{{filmDetail.title}}</h1>
           <p>{{filmDetail.durata}} {{filmDetail.year}}</p>
           <p id="description">{{filmDetail.description}}</p>
@@ -20,7 +20,7 @@
             </div>
 
             <div class="col-2">LANGUAGE:</div>
-            <div class="col-10">
+            <div class="col-10 span-remove">
               <span style="margin-left:50px;"></span>{{filmDetail.language}}</div>
           </div>
         </div>
@@ -82,6 +82,31 @@ export default {
 };
 </script>
 <style scoped>
+@media only screen and (max-width: 576px) {
+        .col {
+          text-align: left !important;
+        }
+        .col-10 {
+          margin-left: 0.05rem;
+        }
+        .col-10  a:first-child{
+          margin-left: 0;
+        }
+        .col-10 span{
+          margin-left: 0 !important;
+        }
+        .mediaImg {
+          margin-top: 20px;
+        }
+    }
+
+.style-col {
+  text-align:justify;
+}
+.col-2,
+.col-10 {
+  margin-top: 20px;
+}
     
 .categories {
   text-decoration: none;
@@ -95,26 +120,11 @@ a:first-child {
 #description {
   margin-top: 30px;
 }
-/* @media only screen and (max-width: 576px) {
-        #description{
-          font-size: .8rem;
-        }
-    } */
+       
 .cast {
   margin-top: 30px;
 }
-@media only screen and (max-width: 576px) {
-        .col-10 {
-          margin-left: 0.05rem;
-        }
-        .mediaImg {
-          margin-top: 20px;
-        }
-    }
-.col-2,
-.col-10 {
-  margin-top: 20px;
-}
+
 .dark:before {
   background: linear-gradient(
     to right bottom,
