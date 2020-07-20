@@ -31,7 +31,7 @@
           </div>
           <div class="buttonTrailer">
             <b-button btn btn-primary v-b-modal.modal-1>TRAILER</b-button>
-            <b-modal id="modal-1">
+            <b-modal id="modal-1" hide-footer>
               <iframe width="100%" height="315" v-bind:src="filmDetail.trailerPath" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </b-modal>
           </div>
