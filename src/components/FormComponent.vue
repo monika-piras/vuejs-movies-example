@@ -40,12 +40,8 @@
 
       <div class="form-group align-left">
         <label class="left" for="inlineFormInput5">Image:</label>
-        <input type="text" class="form-control mb-2" id="inlineFormInput5" v-model="image" placeholder="image code">
-      </div>
-
-      <div class="form-group align-left">
-        <label class="left" for="inlineFormInput6">Image HD:</label>
-        <input type="text" class="form-control mb-2" id="inlineFormInput6" v-model="imageHd" placeholder="image HD code">
+        <input type="text" class="form-control mb-2" id="inlineFormInput5" v-model="image" placeholder="image url">
+        <input type="file" id="avatar" name="avatar" @change="onFileChanged" accept="image/png, image/jpeg">
       </div>
 
       <div class="form-group align-left">
@@ -85,11 +81,27 @@ export default {
       image: null,
       imageHd: null,
       trailer: null,
+      base64: null,
       id: Math.random() * 10
     };
   },
 
   methods: {
+    onFileChanged(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+
+      reader.onload = () => {
+        // console.info("data read:", reader.result);
+        this.base64 = reader.result;
+      };
+
+      reader.onerror = error => {
+        console.error("Error reading image: ", error);
+      };
+    },
+
     checkForm: function(event) {
       this.compileHTMLErrors();
 
@@ -141,12 +153,11 @@ export default {
         categories: this.checkedCategories,
         cast: this.cast,
         prefer: this.prefer,
-        image: this.image,
+        image: this.image? this.image : this.base64,
         imageHd: this.imageHd,
         trailerPath: this.trailer,
-        id: this.id
+        id: this.id,
       };
-
       console.log("save qualcosa ..");
 
       if (this.title) {
@@ -171,6 +182,5 @@ export default {
 .testo {
   color: red;
 }
-
 </style>
 
