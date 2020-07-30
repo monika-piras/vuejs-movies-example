@@ -2,7 +2,7 @@
   <div>
     <!-- {{this.category}}  -->
     <h4 class="font-sizeh4-mobile style-h4" v-if="title">{{title}}
-      <router-link :to="{ path: '/categories/'+ this.category}" style="margin-left:20px;text-decoration:none;font-size:1rem;line-height:1.5;">
+      <router-link :to="{ path: '/categories/'+ this.category}" class="router-link-style">
         Explore</router-link>
     </h4>
 
@@ -10,11 +10,10 @@
       <button class="move-left" @click="less()" v-bind:class="{showButton: isButtonLeftActive}">
         <b-icon-chevron-left></b-icon-chevron-left>
       </button>
-      <ul class="scrollable">
+      <ul class="scrollable padding-mobile">
         <li v-for="film in this.filmsToDisplay" class="relative">
-          <star class="star" v-bind:class="{ 'isPreferred':film.prefer }" v-model="film.prefer" />
-          <!-- <i v-if="film.prefer" class="material-icons star">star</i> -->
-          <img v-bind:src="film.image" @click="directDetails(film.id)" alt="Image Film" />
+          <star class="star" v-bind:class="{ 'isPreferred':film.prefer }" v-model="film.prefer"/>
+          <img v-bind:src="film.image" @click="directDetails(film.id)" alt="Image Film"/>
         </li>
       </ul>
       <button class="move-right" @click="more()">
@@ -50,7 +49,6 @@ export default {
 
     this.$store.watch(
       state => {
-        // return this.$store.state.allFilms; // could also put a Getter here
         return this.$store.getters["filmsStore/getFilms"];
       },
       (newValue, oldValue) => {
@@ -84,27 +82,23 @@ export default {
     },
 
     directDetails(id) {
-      console.log("numero id: " + id);
+      console.log("number id: " + id);
       this.$router.push("/movieDetails/" + id);
     }
   }
 };
 </script>
 <style scoped>
-@media only screen and (max-width: 576px) {
-  .font-sizeh4-mobile {
-    font-size: 1.2rem;
-    margin: 20px 10px !important;
-  }
- .scroll-parent li > img {
-  height: 260px !important;
-  width: 160px !important;
-}
 
-}
 .style-h4 {
   margin: 20px;
   text-align: left;
+}
+.router-link-style {
+  margin-left:20px;
+  text-decoration:none;
+  font-size:1rem;
+  line-height:1.5;
 }
 .scroll-parent {
   position: relative;
@@ -190,5 +184,19 @@ export default {
 
 button {
   outline: none !important;
+}
+
+@media only screen and (max-width: 576px) {
+  .font-sizeh4-mobile {
+    font-size: 1.2rem;
+    margin: 20px 10px ;
+  }
+ .scroll-parent li > img {
+  height: 260px ;
+  width: 160px ;
+  }
+  .padding-mobile {
+    padding: 0 10px;
+  }
 }
 </style>

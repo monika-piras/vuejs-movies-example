@@ -1,10 +1,10 @@
 <template>
   <div>
-    <ul class="scrollable" v-if="this.allFilms.length > 0">
-      <li v-for="elementoCorrente in this.allFilms">
+    <ul class="scrollable no-padding" v-if="this.allFilms.length > 0">
+      <li v-for="item in this.allFilms">
         <div class="image">
-          <star class="star" v-bind:class="{'isPreferred':elementoCorrente.prefer}"v-model="elementoCorrente.prefer"/>
-          <img v-bind:src="elementoCorrente.image" alt="Image Film" @click="directDetails(elementoCorrente.id)"/>
+          <star class="star" v-bind:class="{'isPreferred':item.prefer}"v-model="item.prefer"/>
+          <img v-bind:src="item.image" alt="Image Film" @click="directDetails(item.id)"/>
         </div>
       </li>
     </ul>
@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     directDetails(id) {
-      console.log("numero id: " + id);
+      console.log("number id: " + id);
       this.$router.push("/movieDetails/" + id);
     }
   },
@@ -93,5 +93,8 @@ img {
   right: 15px;
   background-color: rgba(148, 148, 184, 0.8);
   z-index: 2;
+}
+.no-padding {
+  padding:0;
 }
 </style>

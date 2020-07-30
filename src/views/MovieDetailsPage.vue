@@ -2,7 +2,7 @@
   <div class="container">
     <div v-if="filmDetail" class="dark movie-details bg" :style="{ backgroundImage: 'url(' + filmDetail.image + ')'}">
       <div class="row">
-        
+
         <div class="col style-col">
           <h1>{{filmDetail.title}}</h1>
           <p>{{filmDetail.durata}} {{filmDetail.year}}</p>
@@ -26,28 +26,28 @@
         </div>
 
         <div class="col">
-          <div> 
+          <div>
             <img v-bind:src="filmDetail.image" width="200" height="" class="mediaImg">
           </div>
           <div class="buttonTrailer">
-            <b-button btn btn-primary v-b-modal.modal-1>TRAILER</b-button>
+            <b-button btn btn-primary v-b-modal.modal-1>
+              <b-icon-play-fill></b-icon-play-fill>TRAILER</b-button>
+
             <b-modal id="modal-1" hide-footer>
               <iframe width="100%" height="315" v-bind:src="filmDetail.trailerPath" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </b-modal>
           </div>
           <div class="buttonPreferiti">
-            <button class="btn btn-primary">AGGIUNGI A PREFERITI
-              <star v-model="filmDetail.prefer"></star>
+            <button class="btn btn-primary display-style" v-on:click="toggleFavourite()">
+              <star v-model="filmDetail.prefer"></star>FAVOURITE
             </button>
           </div>
         </div>
 
       </div>
-
     </div>
 
   </div>
-
   </div>
 </template>
 
@@ -64,11 +64,15 @@ export default {
     Star
   },
   created() {
-    console.log("creato dettaglio");
+    console.log("detail created");
   },
   methods: {
     goBack() {
       this.$router.push("../");
+    },
+    toggleFavourite() {
+      this.filmDetail.prefer = !this.filmDetail.prefer;
+      console.log("ciao");
     }
   },
   computed: {
@@ -83,31 +87,31 @@ export default {
 </script>
 <style scoped>
 @media only screen and (max-width: 576px) {
-        .col {
-          text-align: left !important;
-        }
-        .col-10 {
-          margin-left: 0.05rem;
-        }
-        .col-10  a:first-child{
-          margin-left: 0;
-        }
-        .col-10 span{
-          margin-left: 0 !important;
-        }
-        .mediaImg {
-          margin-top: 20px;
-        }
-    }
+  .col {
+    text-align: left !important;
+  }
+  .col-10 {
+    margin-left: 0.05rem;
+  }
+  .col-10 a:first-child {
+    margin-left: 0;
+  }
+  .col-10 span {
+    margin-left: 0 !important;
+  }
+  .mediaImg {
+    margin-top: 20px;
+  }
+}
 
 .style-col {
-  text-align:justify;
+  text-align: justify;
 }
 .col-2,
 .col-10 {
   margin-top: 20px;
 }
-    
+
 .categories {
   text-decoration: none;
   color: #79b8f3;
@@ -120,7 +124,7 @@ a:first-child {
 #description {
   margin-top: 30px;
 }
-       
+
 .cast {
   margin-top: 30px;
 }
@@ -139,17 +143,20 @@ a:first-child {
   top: 0;
   z-index: -1;
 }
-.buttonTrailer, .buttonPreferiti {
+.buttonTrailer,
+.buttonPreferiti {
   margin-top: 30px;
 }
-
+.display-style {
+  display: inline-flex;
+}
 .movie-details {
   padding: 3rem 2rem;
 }
 
 .bg {
   background-size: cover;
-  height:100%;
+  height: 100%;
   background-position: top;
   position: relative;
   z-index: 0;

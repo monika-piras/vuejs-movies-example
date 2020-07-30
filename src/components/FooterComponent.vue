@@ -1,6 +1,6 @@
 <template>
   <div>
-      <footer id="sticky-footer" style="margin-top:30px;" class="py-4 bg-dark text-white-50">
+      <footer id="footer-style" class="py-4 bg-dark text-white-50">
         <div class="container text-center">
           <small>Copyright &copy; Vue Movies Website. All Rights Reserved.</small>
         </div>
@@ -16,8 +16,8 @@ export default {
 
 
 <style scoped>
-#sticky-footer {
-  flex-shrink: none;
+#footer-style{
+  margin-top:30px;
 }
 </style>
 

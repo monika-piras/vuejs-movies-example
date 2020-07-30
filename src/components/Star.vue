@@ -1,26 +1,24 @@
 <template>
- 
-  <div @click="change()" style="cursor:pointer;"> 
-      <i v-if="value" class="material-icons">star</i>
-      <i v-if="!value" class="material-icons">star_border</i>
- </div> 
- 
+  <div @click="change($event)" style="cursor:pointer;">
+    <i v-if="value" class="material-icons">star</i>
+    <i v-if="!value" class="material-icons">star_border</i>
+  </div>
+
 </template>
 <script>
 export default {
   name: "Star",
   props: {
-    value:Boolean
+    value: Boolean
   },
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
-    change() {
+    change(event) {
+      event.stopPropagation();
       this.$emit("input", !this.value);
     }
   }
 };
 </script>
-
