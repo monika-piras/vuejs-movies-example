@@ -2,7 +2,7 @@
   <div class="movies-page">
 
     <h2 v-if="searchValue">RESULTS for "{{searchValue}}":</h2>
-    <h2 v-else-if="searchCategory">MOVIES CATEGORY: {{searchCategory}}</h2>
+    <h2 v-else-if="searchCategory">MOVIE CATEGORY: {{searchCategory}}</h2>
     <h2 v-else-if="isFavourites">FAVOURITE MOVIES: {{searchCategory}}</h2>
     <h2 v-else>ALL MOVIES</h2>
 
@@ -87,7 +87,9 @@ h2 {
     width: 3rem;
     height: 3rem;
   }
-
+  .icon-size {
+    font-size: 2rem;
+  }
   .add-movie-label {
     display: none;
   }
