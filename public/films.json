@@ -68,7 +68,7 @@
             "prefer": true,
             "trailerPath":"https://www.youtube.com/embed/WqnEk15YBOw",
             "imageHd":"",
-            "image": "/img/indianailtempio.jpg"
+            "image": "/img/indianaJones.jpg"
         },
         {
             "title": "The Hangover",
@@ -82,7 +82,7 @@
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/rp5T9sSkybY",
             "imageHd":"",
-            "image": "/img/nottedaleoni1.jpg"
+            "image": "/img/hangover1.jpg"
         },
         {
             "title": "Dirty Dancing",
@@ -110,7 +110,7 @@
             "prefer": false,
             "trailerPath": "https://www.youtube.com/embed/Cm9Muy3wbfY",
             "imageHd":"",
-            "image": "/img/nottedaleoni2.jpg"
+            "image": "/img/hangover2.jpg"
         },
         {
             "title": "The Hangover 3",
@@ -124,7 +124,7 @@
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/E3w6X455IiM",
             "imageHd":"",
-            "image": "/img/nottedaleoni3.jpg"
+            "image": "/img/hangover3.jpg"
         },
         {
             "title": "Titanic",
