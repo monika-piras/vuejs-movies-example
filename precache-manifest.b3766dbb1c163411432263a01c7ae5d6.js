@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "78fb678447958d54d4a2",
+    "revision": "9ec7aeb7f8e7f69ef30b",
     "url": "/vuejs-movies-example/css/app.62147ea4.css"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vuejs-movies-example/css/chunk-vendors.2c842817.css"
   },
   {
-    "revision": "ed3ce4789e536cc0a681589fcccfec56",
+    "revision": "16ba408d64e25c8d84cf6b3739adea5f",
     "url": "/vuejs-movies-example/films.json"
   },
   {
@@ -84,12 +84,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vuejs-movies-example/img/titanic.jpg"
   },
   {
-    "revision": "ea977b26227dc187eb6d05a3630ba310",
+    "revision": "e8ee3b8f8a5d9a96d2deb392b0e80013",
     "url": "/vuejs-movies-example/index.html"
   },
   {
-    "revision": "78fb678447958d54d4a2",
-    "url": "/vuejs-movies-example/js/app.0a49be60.js"
+    "revision": "9ec7aeb7f8e7f69ef30b",
+    "url": "/vuejs-movies-example/js/app.0fcd2f2d.js"
   },
   {
     "revision": "b8f09b59c5a322d73c03",

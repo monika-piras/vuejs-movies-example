@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vuejs-movies-example/precache-manifest.02cac9c475ba22cf5cc60f2385886bcf.js"
+  "/vuejs-movies-example/precache-manifest.b3766dbb1c163411432263a01c7ae5d6.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-app-film"});
