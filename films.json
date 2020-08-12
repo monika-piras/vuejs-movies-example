@@ -11,8 +11,8 @@
             "id" : 2,
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/t433PEQGErc",
-            "imageHd":"/img/joker.jpg",
-            "image": "/img/joker2.jpg"
+            "imageHd":"./img/joker.jpg",
+            "image": "./img/joker2.jpg"
         },
         {
             "title": "Frozen II",
@@ -25,8 +25,8 @@
             "id" : 3,
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/HCAaYvu30gg",
-            "imageHd":"/img/frozen.jpg",
-            "image": "/img/frozen2.jpg"
+            "imageHd":"./img/frozen.jpg",
+            "image": "./img/frozen2.jpg"
         },
         {
             "title": "This is Us",
@@ -39,8 +39,8 @@
             "id" : 4,
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/mLNJFL0seLw",
-            "imageHd":"/img/thisus.jpg",
-            "image": "/img/thisisus2.jpg"
+            "imageHd":"./img/thisus.jpg",
+            "image": "./img/thisisus2.jpg"
         },
         {
             "title": "Me contro Te",
@@ -53,8 +53,8 @@
             "id" : 1,
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/ZzemyaqdQfs",
-            "imageHd":"/img/mecontrote.jpg",
-            "image":"/img/mecontrote2.jpg"
+            "imageHd":"./img/mecontrote.jpg",
+            "image":"./img/mecontrote2.jpg"
         },
         {
             "title": "Indiana Jones and the Temple of Doom",
@@ -68,7 +68,7 @@
             "prefer": true,
             "trailerPath":"https://www.youtube.com/embed/WqnEk15YBOw",
             "imageHd":"",
-            "image": "/img/indianaJones.jpg"
+            "image": "./img/indianaJones.jpg"
         },
         {
             "title": "The Hangover",
@@ -82,7 +82,7 @@
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/rp5T9sSkybY",
             "imageHd":"",
-            "image": "/img/hangover1.jpg"
+            "image": "./img/hangover1.jpg"
         },
         {
             "title": "Dirty Dancing",
@@ -96,7 +96,7 @@
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/wcra0-0Gu4U",
             "imageHd":"",
-            "image": "/img/dirtydancing.jpg"
+            "image": "./img/dirtydancing.jpg"
         },
         {
             "title": "The Hangover 2",
@@ -110,7 +110,7 @@
             "prefer": false,
             "trailerPath": "https://www.youtube.com/embed/Cm9Muy3wbfY",
             "imageHd":"",
-            "image": "/img/hangover2.jpg"
+            "image": "./img/hangover2.jpg"
         },
         {
             "title": "The Hangover 3",
@@ -124,7 +124,7 @@
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/E3w6X455IiM",
             "imageHd":"",
-            "image": "/img/hangover3.jpg"
+            "image": "./img/hangover3.jpg"
         },
         {
             "title": "Titanic",
@@ -138,7 +138,7 @@
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/kVrqfYjkTdQ",
             "imageHd":"",
-            "image": "/img/titanic.jpg"
+            "image": "./img/titanic.jpg"
         },
         {
             "title": "Quo Vado",
@@ -152,7 +152,7 @@
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/t3al1PBx09A",
             "imageHd":"",
-            "image": "/img/quovado.jpg"
+            "image": "./img/quovado.jpg"
         },
         {
             "title": "One Night with the King",
@@ -166,7 +166,7 @@
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/GjLy-oYnXBo",
             "imageHd":"",
-            "image": "/img/onenight.jpg"
+            "image": "./img/onenight.jpg"
         },
         {
             "title": "the Best of Me",
@@ -180,7 +180,7 @@
             "prefer": false,
             "trailerPath":"https://www.youtube.com/embed/cQszhfoP_WI",
             "imageHd":"",
-            "image": "/img/thebestofme.jpg"
+            "image": "./img/thebestofme.jpg"
         }
         
     ]
