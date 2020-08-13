@@ -53,7 +53,6 @@ export default {
       },
       (newValue, oldValue) => {
         //something changed do something
-        console.log("watch: ", newValue);
         this.filmList = newValue;
         this.updateListToDisplay();
       },
