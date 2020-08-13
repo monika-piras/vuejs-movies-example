@@ -26,13 +26,11 @@ export default {
                 .get('/vuejs-movies-example/films.json')
                 .then(response => {
                     const list = response.data.list;
-                    console.log('api call response');
                     state.allFilms.push(...list);
                 })
         },
 
         addFilm(state, filmNew) {
-            console.log('state- add Film');
             state.allFilms.push(filmNew);
         }
     },

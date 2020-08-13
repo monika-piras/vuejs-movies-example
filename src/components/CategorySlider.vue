@@ -82,7 +82,6 @@ export default {
     },
 
     directDetails(id) {
-      console.log("number id: " + id);
       this.$router.push("/movieDetails/" + id);
     }
   }

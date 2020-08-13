@@ -2,7 +2,6 @@
   <div class="container">
     <div v-if="filmDetail" class="dark movie-details bg" :style="{ backgroundImage: 'url(' + filmDetail.image + ')'}">
       <div class="row">
-
         <div class="col style-col">
           <h1>{{filmDetail.title}}</h1>
           <p>{{filmDetail.durata}} {{filmDetail.year}}</p>
@@ -10,7 +9,6 @@
           <div class="row cast">
             <div class="col-2">CAST:</div>
             <div class="col-10">{{filmDetail.cast}}</div>
-
             <div class="col-2 category">CATEGORY:</div>
             <div class="col-10">
               <a href="" v-for="(item, index) in filmDetail.categories" :key="item" class="capitalize categories">
@@ -18,13 +16,11 @@
                 <span v-if="index+1 < filmDetail.categories.length">, </span>
               </a>
             </div>
-
             <div class="col-2">LANGUAGE:</div>
             <div class="col-10 span-remove">
               <span style="margin-left:50px;"></span>{{filmDetail.language}}</div>
           </div>
         </div>
-
         <div class="col">
           <div>
             <img v-bind:src="filmDetail.image" width="200" height="" class="mediaImg">
@@ -32,7 +28,6 @@
           <div class="buttonTrailer">
             <b-button btn btn-primary v-b-modal.modal-1>
               <b-icon-play-fill></b-icon-play-fill>TRAILER</b-button>
-
             <b-modal id="modal-1" hide-footer>
               <iframe width="100%" height="315" v-bind:src="filmDetail.trailerPath" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </b-modal>
@@ -43,10 +38,8 @@
             </button>
           </div>
         </div>
-
       </div>
     </div>
-
   </div>
   </div>
 </template>
@@ -63,16 +56,13 @@ export default {
   components: {
     Star
   },
-  created() {
-    console.log("detail created");
-  },
+  created() {},
   methods: {
     goBack() {
       this.$router.push("../");
     },
     toggleFavourite() {
       this.filmDetail.prefer = !this.filmDetail.prefer;
-      console.log("ciao");
     }
   },
   computed: {
@@ -107,6 +97,7 @@ export default {
 .style-col {
   text-align: justify;
 }
+
 .col-2,
 .col-10 {
   margin-top: 20px;
@@ -135,6 +126,7 @@ a:first-child {
     rgba(26, 26, 26, 0.8),
     rgba(89, 89, 89, 0.8)
   );
+
   bottom: 0;
   content: "";
   left: 0;
@@ -147,9 +139,11 @@ a:first-child {
 .buttonPreferiti {
   margin-top: 30px;
 }
+
 .display-style {
   display: inline-flex;
 }
+
 .movie-details {
   padding: 3rem 2rem;
 }
@@ -161,6 +155,7 @@ a:first-child {
   position: relative;
   z-index: 0;
 }
+
 .capitalize {
   text-transform: capitalize;
 }

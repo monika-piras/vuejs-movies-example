@@ -173,7 +173,6 @@ export default {
         trailerPath: this.trailer,
         id: this.id
       };
-      console.log("save something ..");
 
       if (this.title) {
         this.$store.dispatch("filmsStore/callActionAddFilm", film);
