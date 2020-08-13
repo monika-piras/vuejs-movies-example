@@ -23,7 +23,7 @@ export default {
         loadFilmsMutation(state) {
             console.log('Mutation loadFilms');
             axios
-                .get('/films.json')
+                .get('/vuejs-movies-example/films.json')
                 .then(response => {
                     const list = response.data.list;
                     console.log('api call response');

@@ -47,6 +47,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  base: '/vuejs-movies-example',
   linkExactActiveClass: "active",
   routes,
   mode: 'history'
