@@ -1,34 +1,43 @@
-# vue-app-film
+# vuejs-movies-example
 
-## Project setup
+##### An example about how to build a website with [VueJS].
+
+
+Online demo here: https://monika-piras.github.io/vuejs-movies-example/ 
+
+This example shows a library of movies divided by categories.
+The main **categories** are **romantic / comic / adventure movies**.
+The user can view the detail of the film and add it to the favorites list.
+
+The user can also add a new film to the list by filling in the appropriate **form** with controls for patterns and required fields.
+The site retrieves the data with an api call from the films.json file and updates its internal state of the vue store by caching the data.
+
+The navigation of the pages is managed with specific routes and passage of parameters in query strings.
+
+There is a global search that filters the movies on the title field.
+
+The site is responsive and mobile friendly.
+
+## Install
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Run locally
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
-```
-npm run test
-```
+License
+----
 
-### Lints and fixes files
-```
-npm run lint
-```
+MIT
 
-### Run your unit tests
-```
-npm run test:unit
-```
+Version
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+0.1.0
+
+
+
+[VueJS]: <http://https://vuejs.org/>
