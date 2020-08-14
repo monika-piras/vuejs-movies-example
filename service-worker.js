@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vuejs-movies-example/precache-manifest.1184c2276a4dafd40e7556d1cf677483.js"
+  "/vuejs-movies-example/precache-manifest.8b87dd0331bee1024460eb0ef1dc3c80.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "vue-app-film"});
+workbox.core.setCacheNameDetails({prefix: "vuejs-movies-example"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
