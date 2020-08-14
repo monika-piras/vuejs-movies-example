@@ -40,4 +40,4 @@ Version
 
 
 
-[VueJS]: <http://https://vuejs.org/>
+[VueJS]: <https://vuejs.org>
