@@ -3,7 +3,7 @@
 ##### An example about how to build a website with [VueJS].
 
 
-Online demo here: https://monika-piras.github.io/vuejs-movies-example/ 
+Online demo here: https://monika-piras.github.io/vuejs-movies-example/  :tv:
 
 This example shows a library of movies divided by categories.
 The main **categories** are **romantic / comic / adventure movies**.
@@ -28,13 +28,12 @@ npm install
 npm run serve
 ```
 
+## License
 
-License
-----
 
 MIT
 
-Version
+## Version
 
 0.1.0
 
