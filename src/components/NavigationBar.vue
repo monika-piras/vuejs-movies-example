@@ -24,7 +24,7 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-nav-form>
-            <b-form-input v-model="title" size="sm" class="mr-sm-2" placeholder="Search Movie">
+            <b-form-input v-model="title" size="sm" class="mr-sm-2 margin-bottom" placeholder="Search Movie">
             </b-form-input>
             <b-button size="sm" class="my-2 my-sm-0" type="submit" v-on:click="search()">
               <b-icon-search></b-icon-search>&nbsp;Search</b-button>
@@ -96,6 +96,9 @@ export default {
     display: block;
     max-width: 70%;
     margin: auto;
+  }
+  .margin-bottom {
+    margin-bottom: .5rem;
   }
 }
 </style>
