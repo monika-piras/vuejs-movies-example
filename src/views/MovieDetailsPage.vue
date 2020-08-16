@@ -76,7 +76,7 @@ export default {
 };
 </script>
 <style scoped>
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 992px) {
   .col {
     text-align: left !important;
   }

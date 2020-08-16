@@ -189,9 +189,9 @@ button {
     font-size: 1.2rem;
     margin: 20px 10px ;
   }
- .scroll-parent li > img {
-  height: 260px ;
-  width: 160px ;
+  .scroll-parent li > img {
+    height: 260px ;
+    width: 160px ;
   }
   .padding-mobile {
     padding: 0 10px;

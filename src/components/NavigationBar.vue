@@ -15,7 +15,7 @@
           <template v-slot:button-content>
             <em>Categories</em>
           </template>
-          <b-dropdown-item v-for="option in options" router-link v-bind:to="option.value">{{ option.text }}</b-dropdown-item>
+          <b-dropdown-item class="dropdownmenu-mobile" v-for="option in options" router-link v-bind:to="option.value">{{ option.text }}</b-dropdown-item>
         </b-nav-item-dropdown>
 
           <!-- <b-nav-item router-link to="/movieDetailsPage" disabled>Film Details</b-nav-item> -->
@@ -86,5 +86,16 @@ export default {
 }
 /deep/ .dropdown-item:hover{
   color: #212529;;
+}
+
+@media only screen and (max-width: 992px) {
+  .dropdownmenu-mobile {
+    text-align: center;
+  }
+  .form-inline {
+    display: block;
+    max-width: 70%;
+    margin: auto;
+  }
 }
 </style>
