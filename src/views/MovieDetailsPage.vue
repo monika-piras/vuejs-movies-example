@@ -76,6 +76,9 @@ export default {
 };
 </script>
 <style scoped>
+.container {
+  min-height: 100%;
+}
 @media only screen and (max-width: 992px) {
   .col {
     text-align: left !important;

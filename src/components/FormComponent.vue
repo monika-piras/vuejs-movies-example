@@ -45,7 +45,7 @@
         <label for="inlineFormInput5">Image&nbsp;
           <span class="red">&#42;</span>
         </label>
-        <div class="input-image-display">
+        <div>
           <input type="text" class="form-control mb-2 input-width" id="inlineFormInput5" v-model="image" placeholder="image url">
           <span class="span-margin">or</span>
           <input type="file" class="input-button" id="avatar" name="avatar" @change="onFileChanged" accept="image/png, image/jpeg">
@@ -205,17 +205,17 @@ export default {
   display: inline;
   margin-right: 1rem;
 }
-.input-image-display {
-  display: -webkit-box;
-}
+
 .input-width {
-  width: 25%;
+  width: 50%;
 }
 .span-margin {
-  margin: 20px;
+  margin: 10px;
+  display: block;
 }
 .input-button {
   line-height: 2.1;
+  margin-bottom: 10px;
 }
 .switch-margin {
   margin: 40px;

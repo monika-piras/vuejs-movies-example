@@ -34,4 +34,7 @@ export default {
   margin-top:30px; 
   margin-bottom:30px;
 }
+.container {
+  min-height: 100%;
+}
 </style>

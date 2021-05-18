@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- {{this.category}}  -->
     <h4 class="font-sizeh4-mobile style-h4" v-if="title">{{title}}
       <router-link :to="{ path: '/categories/'+ this.category}" class="router-link-style">
         Explore</router-link>
@@ -67,7 +66,7 @@ export default {
       this.$el.querySelector(".scrollable").scrollLeft += +300;
       if (this.$el.querySelector(".scrollable").scrollLeft != 0) {
         this.isButtonLeftActive = true;
-      }
+      } 
     },
     less() {
       this.$el.querySelector(".scrollable").scrollLeft += -300;
@@ -174,10 +173,6 @@ export default {
 
 .showButton {
   visibility: visible;
-}
-
-.scrollItem {
-  overflow: hidden;
 }
 
 button {

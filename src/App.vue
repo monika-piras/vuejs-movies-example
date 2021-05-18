@@ -9,11 +9,6 @@
 import NavigationBar from "@/components/NavigationBar.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
-import Vue from "vue";
-import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
-
-// Install BootstrapVue
-Vue.use(BootstrapVue);
 
 export default {
   name: "App",
@@ -34,10 +29,9 @@ html,
 body {
   height: 100%;
   background-color: #1a1a1a;
-
 }
 #app {
-  // height: 100%;
+  height: -webkit-fill-available;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   font-family: "Orbitron", sans-serif;
   -webkit-font-smoothing: antialiased;

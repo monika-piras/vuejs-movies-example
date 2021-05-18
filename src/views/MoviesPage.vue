@@ -74,7 +74,7 @@ h2 {
   transform: translateY(4px);
 }
 .movies-page {
-  height: 100%;
+  min-height: 100%;
 }
 
 .icon-size {
