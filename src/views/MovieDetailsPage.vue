@@ -76,9 +76,6 @@ export default {
 };
 </script>
 <style scoped>
-.container {
-  min-height: 100%;
-}
 @media only screen and (max-width: 992px) {
   .col {
     text-align: left !important;
@@ -95,6 +92,11 @@ export default {
   .mediaImg {
     margin-top: 20px;
   }
+}
+
+.container {
+  min-height: 100%;
+  margin-top: 30px;
 }
 
 .style-col {
